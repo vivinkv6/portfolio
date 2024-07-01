@@ -36,12 +36,12 @@ function page() {
                 unoptimized
               />
             </div>
-            <h2 className={`text-xl font-semibold mb-4 ${projectHeader.className}`}>{project.name}</h2>
+            <h2 className={`text-xl font-semibold text-white mb-4 ${projectHeader.className}`}>{project.name}</h2>
             <div className="mt-auto flex space-x-4 flex-row justify-center">
               {project?.public_link && (
                 <Link
                   href={project?.public_link}
-                  className={`${projectHeader.className} bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded`}
+                  className={`${projectHeader.className} bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white`}
                 >
                   View
                 </Link>
@@ -49,7 +49,7 @@ function page() {
 
               <Link
                 href={project.github_link}
-                className={`${projectHeader.className} bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded`}
+                className={`${projectHeader.className} bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-white`}
               >
                 Source Code
               </Link>
