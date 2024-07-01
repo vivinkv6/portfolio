@@ -1,0 +1,105 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import About from "/public/avatar.jpg";
+import Avatar from "/public/about.jpg";
+import Link from "next/link";
+import { header } from "../font";
+
+const AboutPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-950 text-white">
+      <main className="container mx-auto px-4 pt-24">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="py-20"
+        >
+          <h1 className={`${header.className} text-4xl md:text-5xl font-bold mb-6`}>About Me</h1>
+
+          <div className="flex flex-col md:items-start md:justify-between md:flex-row-reverse">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="w-full md:w-2/5 h-64 md:h-96 relative rounded-lg overflow-hidden shadow-lg mb-8 md:mb-0 md:sticky md:top-24"
+            >
+            
+              <Image
+                src={About}
+                alt="Vivin KV"
+                height={500}
+                unoptimized
+                className="rounded-lg hidden max-sm:block"
+              />
+              <Image
+                src={Avatar}
+                alt="Vivin KV"
+                height={500}
+                unoptimized
+                className="rounded-lg max-sm:hidden"
+              />
+            </motion.div>
+            <div className="w-full md:w-1/2">
+              <p className="text-lg mb-4">
+                I recently completed my graduation at Sri C Achuthamenon Govt
+                College Thrissur, deeply passionate about front-end development.
+                My primary focus is on the MERN stack and mobile app development
+                using React Native.
+              </p>
+              <p className="text-lg mb-4">
+                During my journey, I had the privilege of a 2-month internship
+                at Trebuchet Systems Kochi, where I honed my skills as a
+                front-end developer. Additionally, I served as a dedicated Tech
+                Lead for the Tinkerhub GCT campus team under Tinkerhub,
+                dedicating a year to teaching technical content to students from
+                various colleges and preparing them for success in the tech
+                industry.
+              </p>
+              <p className="text-lg mb-6">
+                I take pride in my participation in Tech Fests organized by
+                numerous colleges in the Thrissur region, reflecting my
+                commitment to staying at the forefront of technological
+                advancements. JavaScript holds a special place in my heart, and
+                I have transitioned to TypeScript for its robust type safety
+                features. Among JavaScript libraries, React is my absolute
+                favorite.
+              </p>
+              <div className="flex space-x-4">
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  className="text-3xl hover:text-blue-400 transition-colors"
+                  rel="noopener noreferrer"
+                >
+                  <Link href={"https://github.com/vivinkv6"}>
+                    <FaGithub />
+                  </Link>
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  className="text-3xl hover:text-blue-400 transition-colors"
+                  rel="noopener noreferrer"
+                >
+                  <Link href={"https://in.linkedin.com/in/vivin-k-v-8816ba291"}>
+                    <FaLinkedin />
+                  </Link>
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  className="text-3xl hover:text-blue-400 transition-colors"
+                >
+                  <Link href={"mailto:vivinkv851@gmail.com"}>
+                    <FaEnvelope />
+                  </Link>
+                </motion.span>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+      </main>
+    </div>
+  );
+};
+
+export default AboutPage;
