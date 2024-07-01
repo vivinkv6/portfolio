@@ -7,12 +7,12 @@ import Link from "next/link";
 import { header, projectHeader } from "@/app/font";
 function page() {
   return (
-    <main className="container mx-auto p-4">
+    <main className="container mx-auto p-4 bg-gray-950">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`${header.className} text-4xl font-bold mb-8 my-16`}
+        className={`${header.className} text-4xl font-bold mb-8 my-16 text-white`}
       >
         Projects
       </motion.h1>

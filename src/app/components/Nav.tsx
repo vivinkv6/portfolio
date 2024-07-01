@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
                 className='rounded-full'
               /> */}
             {/* </motion.div> */}
-            <span className="text-xl font-bold">VIVIN KV</span>
+            <span className="text-xl font-bold text-white">VIVIN KV</span>
           </Link>
           
           {/* Desktop Menu */}
@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
               <motion.li
                 key={item.id}
                 whileHover={{ scale: 1.1 }}
-                className="cursor-pointer hover:text-blue-400 transition-colors"
+                className="cursor-pointer hover:text-blue-400 transition-colors text-white"
               >
               <Link href={item.link}>{item.name}</Link>  
               </motion.li>
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
               <motion.li
                 key={item.id}
                 whileHover={{ scale: 1.1 }}
-                className="cursor-pointer hover:text-blue-400 transition-colors list-none ms-6"
+                className="cursor-pointer hover:text-blue-400 transition-colors list-none ms-6 text-white"
               >
               <Link href={item.link}>{item.name}</Link>  
               </motion.li>
