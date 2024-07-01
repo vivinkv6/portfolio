@@ -3,7 +3,7 @@ import { education } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { header } from "../font";
+import { header } from "@/app/font";
 
 const Education = () => {
   return (

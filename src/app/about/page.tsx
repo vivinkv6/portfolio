@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import About from "/public/avatar.jpg";
 import Avatar from "/public/about.jpg";
 import Link from "next/link";
-import { header } from "../font";
+import { header } from "@/app/font";
 
 const AboutPage: React.FC = () => {
   return (

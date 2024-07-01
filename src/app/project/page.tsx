@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import { header, projectHeader } from "../font";
+import { header, projectHeader } from "@/app/font";
 function page() {
   return (
     <main className="container mx-auto p-4">

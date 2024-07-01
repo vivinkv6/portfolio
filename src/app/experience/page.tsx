@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { experience } from "@/lib/data";
 import Link from "next/link";
-import { header } from "../font";
+import { header } from "@/app/font";
 
 const ExperiencePage= () => {
   return (

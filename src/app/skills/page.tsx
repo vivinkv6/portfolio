@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { skills } from "@/lib/data";
-import { header } from "../font";
+import { header } from "@/app/font";
 function page() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
