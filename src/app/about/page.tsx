@@ -1,31 +1,42 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import About from "/public/avatar.jpg";
 import Avatar from "/public/about.jpg";
 import Link from "next/link";
 import { header } from "@/app/font";
+import { DivBoundary, SectionBoundary, SpanBoundary } from "@/lib/animBoundary";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Me",
+  description: `I recently completed my graduation at Sri C Achuthamenon Govt
+  College Thrissur, deeply passionate about front-end development.
+  My primary focus is on the MERN stack and mobile app development
+  using React Native.`,
+};
 
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <main className="container mx-auto px-4 pt-24">
-        <motion.section
+        <SectionBoundary
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="py-20"
         >
-          <h1 className={`${header.className} text-4xl md:text-5xl font-bold mb-6`}>About Me</h1>
+          <h1
+            className={`${header.className} text-4xl md:text-5xl font-bold mb-6`}
+          >
+            About Me
+          </h1>
 
           <div className="flex flex-col md:items-start md:justify-between md:flex-row-reverse">
-            <motion.div
+            <DivBoundary
               whileHover={{ scale: 1.05 }}
               className="w-full md:w-2/5 h-64 md:h-96 relative rounded-lg overflow-hidden shadow-lg mb-8 md:mb-0 md:sticky md:top-24"
             >
-            
               <Image
                 src={About}
                 alt="Vivin KV"
@@ -40,8 +51,8 @@ const AboutPage: React.FC = () => {
                 unoptimized
                 className="rounded-lg max-sm:hidden"
               />
-            </motion.div>
-            <div className="w-full md:w-1/2">
+            </DivBoundary>
+            <div className="w-full md:w-1/2 text-gray-400">
               <p className="text-lg mb-4">
                 I recently completed my graduation at Sri C Achuthamenon Govt
                 College Thrissur, deeply passionate about front-end development.
@@ -66,8 +77,8 @@ const AboutPage: React.FC = () => {
                 features. Among JavaScript libraries, React is my absolute
                 favorite.
               </p>
-              <div className="flex space-x-4">
-                <motion.span
+              <div className="flex space-x-4 text-white">
+                <SpanBoundary
                   whileHover={{ scale: 1.1 }}
                   className="text-3xl hover:text-blue-400 transition-colors"
                   rel="noopener noreferrer"
@@ -75,8 +86,8 @@ const AboutPage: React.FC = () => {
                   <Link href={"https://github.com/vivinkv6"}>
                     <FaGithub />
                   </Link>
-                </motion.span>
-                <motion.span
+                </SpanBoundary>
+                <SpanBoundary
                   whileHover={{ scale: 1.1 }}
                   className="text-3xl hover:text-blue-400 transition-colors"
                   rel="noopener noreferrer"
@@ -84,19 +95,19 @@ const AboutPage: React.FC = () => {
                   <Link href={"https://in.linkedin.com/in/vivin-k-v-8816ba291"}>
                     <FaLinkedin />
                   </Link>
-                </motion.span>
-                <motion.span
+                </SpanBoundary>
+                <SpanBoundary
                   whileHover={{ scale: 1.1 }}
                   className="text-3xl hover:text-blue-400 transition-colors"
                 >
                   <Link href={"mailto:vivinkv851@gmail.com"}>
                     <FaEnvelope />
                   </Link>
-                </motion.span>
+                </SpanBoundary>
               </div>
             </div>
           </div>
-        </motion.section>
+        </SectionBoundary>
       </main>
     </div>
   );

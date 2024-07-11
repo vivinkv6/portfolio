@@ -9,30 +9,7 @@ export const metadata: Metadata = {
   title: "Vivin KV",
   description:
     "Passionate about creating robust and scalable web applications. Experienced in both front-end and back-end technologies, with a knack for problem-solving and delivering high-quality code.",
-  keywords: [
-    'vivinkv',
-     'vivin',
-    "Sri C Achuthamenon Govt College Thrissur",
-    "Front-end development",
-    "MERN stack",
-    "Mobile app development",
-    "React Native",
-    "Trebuchet Systems Kochi",
-    "Front-end developer",
-    "Tech Lead",
-    "Tinkerhub GCT campus team",
-    "Teaching technical content",
-    "Tech industry preparation",
-    "Tech Fests",
-    "Thrissur region",
-    "JavaScript",
-    "TypeScript",
-    "Robust type safety",
-    "React library",
-    "Innovative projects",
-    "Technological advancements",
-    "Collaboration opportunities",
-  ],
+  keywords: ["vivin-kv", "mern", "next", "react-native"],
 };
 
 export default function RootLayout({

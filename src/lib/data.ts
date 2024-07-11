@@ -12,7 +12,6 @@ import Project8 from "/public/project/project8.png";
 import Project9 from "/public/project/project9.png";
 import Project10 from "/public/project/project10.png";
 
-
 //education
 import College from "/public/education/college.png";
 import hss from "/public/education/hss.jpeg";
@@ -59,6 +58,8 @@ type Skills = {
   id: number;
   name: string;
   logo?: StaticImageData | string;
+  color?: string;
+  link?: string;
 };
 
 type Project = {
@@ -69,7 +70,7 @@ type Project = {
   github_link: string;
   public_link?: string;
   skills: Skills[];
-  mobile?:boolean
+  mobile?: boolean;
 }[];
 
 type Experience = {
@@ -168,101 +169,121 @@ export const skills: Skills[] = [
     id: 1,
     name: "Next JS",
     logo: nextjs,
+    link: "https://nextjs.org/",
   },
   {
     id: 2,
     name: "React JS",
     logo: reactjs,
+    link: "https://react.dev/",
   },
   {
     id: 3,
     name: "Node JS",
     logo: nodejs,
+    link: "https://nodejs.org/en",
   },
   {
     id: 4,
     name: "Express JS",
     logo: expressjs,
+    link: "https://expressjs.com/",
   },
   {
     id: 5,
     name: "MongoDB",
     logo: mongodb,
+    link: "https://www.mongodb.com/",
   },
   {
     id: 6,
     name: "PostgreSQL",
     logo: postgresql,
+    link: "https://www.postgresql.org/",
   },
   {
     id: 7,
     name: "HTML",
     logo: html,
+    link: "https://www.w3schools.com/html/",
   },
   {
     id: 8,
     name: "CSS",
     logo: css,
+    link: "https://www.w3schools.com/css/",
   },
   {
     id: 9,
     name: "JavaScript",
     logo: javascript,
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     id: 10,
     name: "TypeScript",
     logo: typescript,
+    link: "https://www.typescriptlang.org/",
   },
   {
     id: 11,
     name: "Git",
     logo: git,
+    link: "https://git-scm.com/",
   },
   {
     id: 12,
     name: "GitHub",
     logo: github,
+    link: "https://github.com/",
   },
   {
     id: 13,
     name: "Tailwind",
     logo: tailwind,
+    link: "https://tailwindcss.com/",
   },
   {
     id: 14,
     name: "Bootstrap",
     logo: bootstrap,
+    link: "https://getbootstrap.com/",
   },
   {
     id: 15,
     name: "Sequelize",
     logo: sequelize,
+    link: "https://sequelize.org/",
   },
   {
     id: 16,
     name: "Trello",
     logo: trello,
+    link: "https://trello.com/",
   },
   {
     id: 17,
     name: "Vercel",
     logo: vercel,
+    link: "https://vercel.com/",
   },
   {
     id: 18,
     name: "Vite",
     logo: vite,
+    link: "https://vitejs.dev/",
   },
   {
     id: 19,
     name: "VS Code",
     logo: vscode,
+    link: "https://code.visualstudio.com/",
   },
   {
     id: 20,
     name: "Canva",
     logo: canva,
+    link: "https://www.canva.com/",
   },
 ];
 
@@ -278,22 +299,27 @@ export const projects: Project = [
       {
         id: 1,
         name: "Next JS",
+        color: "#000000",
       },
       {
         id: 2,
         name: "TypeScript",
+        color: "#3178C6",
       },
       {
         id: 3,
         name: "Tailwind CSS",
+        color: "#38B2AC",
       },
       {
         id: 4,
         name: "Next Auth",
+        color: "#000000",
       },
       {
         id: 5,
         name: "PostgreSQL",
+        color: "#336791",
       },
     ],
   },
@@ -308,22 +334,22 @@ export const projects: Project = [
       {
         id: 1,
         name: "Next JS",
-        logo: "",
+        color: "#000000",
       },
       {
         id: 2,
         name: "TypeScript",
-        logo: "",
+        color: "#3178C6",
       },
       {
         id: 3,
         name: "Tailwind CSS",
-        logo: "",
+        color: "#38B2AC",
       },
       {
         id: 4,
         name: "TMDB API",
-        logo: "",
+        color: "#01D277",
       },
     ],
   },
@@ -338,22 +364,22 @@ export const projects: Project = [
       {
         id: 1,
         name: "React JS",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 2,
         name: "TypeScript",
-        logo: "",
+        color: "#3178C6",
       },
       {
         id: 3,
-        name: "Tailwind CSS",
-        logo: "",
+        name: "Tailwind",
+        color: "#38B2AC",
       },
       {
         id: 4,
         name: "Framer Motion",
-        logo: "",
+        color: "#0055FF",
       },
     ],
   },
@@ -367,37 +393,37 @@ export const projects: Project = [
       {
         id: 1,
         name: "Node JS",
-        logo: "",
+        color: "#339933",
       },
       {
         id: 2,
         name: "Express JS",
-        logo: "",
+        color: "#000000",
       },
       {
         id: 3,
         name: "Bootstrap",
-        logo: "",
+        color: "#7952B3",
       },
       {
         id: 4,
         name: "AOS",
-        logo: "",
+        color: "#000000",
       },
       {
         id: 5,
         name: "EJS",
-        logo: "",
+        color: "#A91E50",
       },
       {
         id: 6,
         name: "PostgreSQL",
-        logo: "",
+        color: "#336791",
       },
       {
         id: 7,
         name: "Sequelize",
-        logo: "",
+        color: "#52B0E7",
       },
     ],
   },
@@ -411,32 +437,32 @@ export const projects: Project = [
       {
         id: 1,
         name: "Node JS",
-        logo: "",
+        color: "#339933",
       },
       {
         id: 2,
         name: "Express JS",
-        logo: "",
+        color: "#000000",
       },
       {
         id: 3,
         name: "Tailwind",
-        logo: "",
+        color: "#38B2AC",
       },
       {
         id: 4,
         name: "React JS",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 5,
         name: "TypeScript",
-        logo: "",
+        color: "#3178C6",
       },
       {
         id: 6,
         name: "MongoDB",
-        logo: "",
+        color: "#47A248",
       },
     ],
   },
@@ -451,27 +477,27 @@ export const projects: Project = [
       {
         id: 1,
         name: "Node JS",
-        logo: "",
+        color: "#339933",
       },
       {
         id: 2,
         name: "Express JS",
-        logo: "",
+        color: "#000000",
       },
       {
         id: 3,
         name: "EJS",
-        logo: "",
+        color: "#A91E50",
       },
       {
         id: 4,
         name: "Bootstrap",
-        logo: "",
+        color: "#7952B3",
       },
       {
         id: 5,
         name: "Pexel API",
-        logo: "",
+        color: "#000000",
       },
     ],
   },
@@ -486,17 +512,17 @@ export const projects: Project = [
       {
         id: 1,
         name: "React JS",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 2,
         name: "JavaScript",
-        logo: "",
+        color: "#e6d33e",
       },
       {
         id: 3,
         name: "Bootstrap",
-        logo: "",
+        color: "#7952B3",
       },
     ],
   },
@@ -511,88 +537,88 @@ export const projects: Project = [
       {
         id: 1,
         name: "React JS",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 2,
         name: "JavaScript",
-        logo: "",
+        color: "#e6d33e",
       },
       {
         id: 3,
         name: "Bootstrap",
-        logo: "",
+        color: "#7952B3",
       },
     ],
   },
 
   {
     id: 9,
-    banner:Project9,
+    banner: Project9,
     description: "dfdf",
     github_link: "https://github.com/vivinkv6/github-clone",
     name: "GitHub Clone",
-    mobile:true,
+    mobile: true,
     skills: [
       {
         id: 1,
         name: "React Native",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 2,
         name: "TypeScript",
-        logo: "",
+        color: "#3178C6",
       },
       {
         id: 3,
         name: "Expo",
-        logo: "",
+        color: "#000020",
       },
       {
         id: 4,
         name: "Expo Router",
-        logo: "",
+        color: "#000020",
       },
       {
         id: 5,
         name: "GitHub API",
-        logo: "",
+        color: "#181717",
       },
     ],
   },
   {
     id: 10,
-    banner:Project10,
+    banner: Project10,
     description: "dfdf",
     github_link: "https://github.com/vivinkv6/youtube-clone",
     name: "YouTube Clone",
-    mobile:true,
+    mobile: true,
     skills: [
       {
         id: 1,
         name: "React Native",
-        logo: "",
+        color: "#1fc1ed",
       },
       {
         id: 2,
         name: "TypeScript",
-        logo: "",
+        color: "#3178C6",
       },
       {
         id: 3,
         name: "Expo",
-        logo: "",
+        color: "#000020",
       },
       {
         id: 4,
         name: "Expo Router",
-        logo: "",
+        color: "#000020",
       },
       {
         id: 5,
         name: "YouTube API",
-        logo: "",
+        color: "#FF0000",
       },
     ],
   },
