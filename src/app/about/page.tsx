@@ -52,14 +52,14 @@ const AboutPage: React.FC = () => {
                 className="rounded-lg max-sm:hidden"
               />
             </DivBoundary>
-            <div className="w-full md:w-1/2 text-gray-400">
-              <p className="text-lg mb-4">
+            <div className="w-full md:w-1/2 text-gray-400 text-lg max-sm:text-sm">
+              <p className="mb-4">
                 I recently completed my graduation at Sri C Achuthamenon Govt
                 College Thrissur, deeply passionate about front-end development.
                 My primary focus is on the MERN stack and mobile app development
                 using React Native.
               </p>
-              <p className="text-lg mb-4">
+              <p className="mb-4">
                 During my journey, I had the privilege of a 2-month internship
                 at Trebuchet Systems Kochi, where I honed my skills as a
                 front-end developer. Additionally, I served as a dedicated Tech
@@ -68,7 +68,7 @@ const AboutPage: React.FC = () => {
                 various colleges and preparing them for success in the tech
                 industry.
               </p>
-              <p className="text-lg mb-6">
+              <p className="mb-6">
                 I take pride in my participation in Tech Fests organized by
                 numerous colleges in the Thrissur region, reflecting my
                 commitment to staying at the forefront of technological
