@@ -30,7 +30,7 @@ const Education = () => {
                   <div className="w-24 h-24  bg-gray-200 rounded-full flex-shrink-0">
                     <Image
                       src={edu.logo}
-                      alt="Sri C Achuthamenon"
+                      alt={edu.name}
                       unoptimized
                       className="rounded-full"
                     />

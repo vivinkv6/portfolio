@@ -3,10 +3,15 @@ import HeroSection from "@/app/components/HeroSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vivin KV",
+  title: "VivinKV",
   description:
-    "Passionate about creating robust and scalable web applications. Experienced in both front-end and back-end technologies, with a knack for problem-solving and delivering high-quality code.",
-  keywords: ["vivin-kv", "full-stack-developer", "vivinkv"],
+    "Passionate about creating scalable web applications.Skilled in front-end and back-end technologies,with a knack for problem-solving and high-quality code.",
+  keywords: ["vivin-kv", "full-stack-developer", "vivin"],
+  openGraph: {
+    title: "VivinKV",
+    description:
+      "Passionate about creating scalable web applications.Skilled in front-end and back-end technologies,with a knack for problem-solving and high-quality code.",
+  },
 };
 
 const HomePage = () => {
