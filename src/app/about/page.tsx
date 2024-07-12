@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      <main className="container mx-auto px-4 pt-24">
+      <main className="container mx-auto px-4 pt-24 max-sm:pt-5">
         <SectionBoundary
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
