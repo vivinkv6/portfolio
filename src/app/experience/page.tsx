@@ -6,7 +6,7 @@ import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience Page",
+  title: "Experience",
   keywords: ["tinkerhub", "trebuchet"],
 };
 const ExperiencePage = () => {

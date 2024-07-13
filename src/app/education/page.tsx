@@ -3,7 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { header } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Education",
+  keywords:['sri-c-achuthamenon-govt-college-kuttanellur-thrissur','cnn-hss-cherpu-thrissur']
+};
 const Education = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white">

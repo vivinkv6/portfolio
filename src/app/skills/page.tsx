@@ -4,6 +4,12 @@ import { skills } from "@/lib/data";
 import { header } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Skills",
+  keywords:['html','css','javascript','react-js','next-js','mongo-db','postgresql','express-js','typescript','node-js']
+};
 function page() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">

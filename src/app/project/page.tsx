@@ -7,8 +7,8 @@ import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Project Page",
-  keywords: ["movie-dashboard", "finance-dashboard", "techconnect-hub"],
+  title: "Projects",
+  keywords: ["movie-dashboard", "finance-dashboard", "techconnect-hub",'pexel-clone','github-clone','youtube-clone'],
 };
 function page() {
   return (

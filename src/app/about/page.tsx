@@ -9,7 +9,7 @@ import { DivBoundary, SectionBoundary, SpanBoundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "About",
   description: `I recently completed my graduation at Sri C Achuthamenon Govt
   College Thrissur, deeply passionate about front-end development.
   My primary focus is on the MERN stack and mobile app development
