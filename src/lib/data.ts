@@ -11,6 +11,7 @@ import Project7 from "/public/project/project7.png";
 import Project8 from "/public/project/project8.png";
 import Project9 from "/public/project/project9.png";
 import Project10 from "/public/project/project10.png";
+import Project11 from '/public/project/project11.png';
 
 //education
 import College from "/public/education/college.png";
@@ -37,6 +38,7 @@ import vscode from "/public/skills/vscode.png";
 import canva from "/public/skills/canva.png";
 import vite from "/public/skills/vite.png";
 import trello from "/public/skills/trello.png";
+import strapi from "/public/skills/strapi.png"
 
 type Link = {
   id: number;
@@ -285,13 +287,49 @@ export const skills: Skills[] = [
     logo: canva,
     link: "https://www.canva.com/",
   },
+  {
+    id: 21,
+    name: "Strapi",
+    logo: strapi,
+    link: "https://strapi.io/",
+  },
 ];
 
 export const projects: Project = [
   {
     id: 1,
+    banner: Project11,
+    description: "daily.dev clone - blog application using Next js",
+    github_link: "https://github.com/vivinkv6/daily-dev-clone",
+    name: "Daily Dev Clone",
+    public_link: "https://daily-dev-clone.vercel.app/",
+    skills: [
+      {
+        id: 1,
+        name: "Next JS",
+        color: "#000000",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        color: "#3178C6",
+      },
+      {
+        id: 3,
+        name: "Tailwind CSS",
+        color: "#38B2AC",
+      },
+      {
+        id: 4,
+        name: "Daily Dev API",
+        color: "#000000",
+      },
+    ],
+  },
+  {
+    id: 2,
     banner: Project1,
-    description: "dfdf",
+    description: "finance dashboard",
     github_link: "https://github.com/vivinkv6/finance-dashboard",
     name: "Finance Dashboard",
     public_link: "https://findas.vercel.app/",
@@ -324,9 +362,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     banner: Project2,
-    description: "dfdf",
+    description: "List down all movies list",
     github_link: "https://github.com/vivinkv6/movie-dashboard",
     name: "Movie Dashboard",
     public_link: "https://nextmdb.vercel.app/",
@@ -354,9 +392,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     banner: Project3,
-    description: "dfdf",
+    description: "General quiz application using react",
     github_link: "https://github.com/vivinkv6/quiz-app",
     name: "Quiz Application",
     public_link: "https://reactquizzapp.vercel.app/",
@@ -384,9 +422,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     banner: Project4,
-    description: "dfdf",
+    description: "Event sharing platform",
     github_link: "https://github.com/vivinkv6/tech-connect-hub",
     name: "Tech Connect Hub",
     skills: [
@@ -428,9 +466,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     banner: Project5,
-    description: "dfdf",
+    description: "short note application",
     github_link: "https://github.com/vivinkv6/mern-note-frontend",
     name: "Note Application",
     skills: [
@@ -467,9 +505,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     banner: Project6,
-    description: "dfdf",
+    description: "Pexels clone using ejs, node js, express",
     github_link: "https://github.com/vivinkv6/pexel-clone",
     public_link: "https://pexel.onrender.com/",
     name: "Pexels Clone",
@@ -502,9 +540,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     banner: Project7,
-    description: "dfdf",
+    description: "Expense tracker using react",
     github_link: "https://github.com/vivinkv6/budget-tracker",
     public_link: "https://expense-tracker-vivinkv6.vercel.app/",
     name: "Budget Tracker",
@@ -527,9 +565,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     banner: Project8,
-    description: "dfdf",
+    description: "BMI Calculator using react",
     github_link: "https://github.com/vivinkv6/BMI-Calculator",
     public_link: "https://bmi-calculator-liart.vercel.app/",
     name: "BMI Calculator",
@@ -553,9 +591,9 @@ export const projects: Project = [
   },
 
   {
-    id: 9,
+    id: 10,
     banner: Project9,
-    description: "dfdf",
+    description: "Github UI clone using react native",
     github_link: "https://github.com/vivinkv6/github-clone",
     name: "GitHub Clone",
     mobile: true,
@@ -588,9 +626,9 @@ export const projects: Project = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     banner: Project10,
-    description: "dfdf",
+    description: "Youtube UI clone using react native",
     github_link: "https://github.com/vivinkv6/youtube-clone",
     name: "YouTube Clone",
     mobile: true,

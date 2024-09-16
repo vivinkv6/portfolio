@@ -53,7 +53,7 @@ function page() {
             >
               {project.name}
             </h2>
-            <div className="flex flex-row flex-wrap gap-3">
+            <div className="flex flex-row flex-wrap gap-2">
               {project.skills.map((skill) => {
                 return (
                   <li
