@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import opengraph from "@/app/opengraph-image.jpg";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${process.env.URL}/${opengraph}`),
+  metadataBase: new URL(`${process.env.URL}/opengraph-image.jpg`),
   title:
     "VivinKV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
   description:
