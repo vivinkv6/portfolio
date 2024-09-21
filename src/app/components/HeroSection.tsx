@@ -28,7 +28,7 @@ function HeroSection() {
           Experienced in both front-end and back-end technologies, with a knack
           for problem-solving and delivering high-quality code.
         </ParagraphBoundary>
-        <div className="flex justify-center space-x-6">
+        {/* <div className="flex justify-center space-x-6">
           <SpanBoundary
             whileHover={{ scale: 1.1 }}
             className="text-3xl hover:text-blue-400 transition-colors"
@@ -65,7 +65,7 @@ function HeroSection() {
               <FaEnvelope />
             </Link>
           </SpanBoundary>
-        </div>
+        </div> */}
         <button className="mt-5 bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded font-semibold">
           <Link
             target="_blank"
