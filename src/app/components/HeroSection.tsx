@@ -22,7 +22,7 @@ function HeroSection() {
               "@type": "Person",
               name: "Vivin KV",
               jobTitle: "Next js Developer at Spiderworks Technologies",
-              url: "https://vivinkv.com", // Replace with your personal website
+              url: "https://www.vivinkv.me",
               sameAs: [
                 "https://github.com/vivinkv6",
                 "https://in.linkedin.com/in/vivin-k-v-8816ba291",
