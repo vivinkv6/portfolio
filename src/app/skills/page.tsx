@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Explore VivinKV's diverse skill set, covering technologies like Next.js, React.js, Node.js, MongoDB, TypeScript, Git, and more. VivinKV excels in developing scalable applications using modern web development tools.",
     type: "website",
-    siteName: "VivinKV",
+    siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/skills`,
   },

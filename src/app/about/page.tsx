@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Learn more about VivinKV, a skilled MERN stack and React Native developer. Recently graduated from Sri C Achuthamenon Govt College, with experience as a front-end developer at Trebuchet Systems and Tech Lead at Tinkerhub GCT.",
     type: "website",
-    siteName: "VivinKV",
+    siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/about`,
   },

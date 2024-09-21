@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description:
       "A showcase of VivinKV's development portfolio, including web and mobile applications built with modern technologies like React, TypeScript, Next.js, and more.",
     type: "website",
-    siteName: "VivinKV",
+    siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/projects`,
   },

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "A detailed overview of VivinKV's work experience, highlighting roles at Trebuchet Systems and TinkerHub GCT, focusing on front-end development and technical leadership.",
     type: "website",
-    siteName: "VivinKV",
+    siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/experience`,
   },

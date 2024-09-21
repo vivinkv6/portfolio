@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       "VivinKV graduated with a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur and completed his higher secondary education in Commerce at CNN Higher Secondary School. These academic experiences are pivotal to his growth as a skilled developer.",
     type: "website",
-    siteName: "VivinKV",
+    siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/education`,
   },
