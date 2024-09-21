@@ -32,18 +32,24 @@ function HeroSection() {
           <SpanBoundary
             whileHover={{ scale: 1.1 }}
             className="text-3xl hover:text-blue-400 transition-colors"
-            rel="noopener noreferrer"
           >
-            <Link href={`https://github.com/vivinkv6`}>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/vivinkv6"
+            >
               <FaGithub />
             </Link>
           </SpanBoundary>
           <SpanBoundary
             whileHover={{ scale: 1.1 }}
             className="text-3xl hover:text-blue-400 transition-colors"
-            rel="noopener noreferrer"
           >
-            <Link href={`https://in.linkedin.com/in/vivin-k-v-8816ba291`}>
+            <Link
+              href="https://in.linkedin.com/in/vivin-k-v-8816ba291"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
             </Link>
           </SpanBoundary>
@@ -51,14 +57,21 @@ function HeroSection() {
             whileHover={{ scale: 1.1 }}
             className="text-3xl hover:text-blue-400 transition-colors"
           >
-            <Link href="mailto:vivinkv851@gmail.com">
+            <Link
+              href="mailto:vivinkv851@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaEnvelope />
             </Link>
           </SpanBoundary>
         </div>
         <button className="mt-5 bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded font-semibold">
           <Link
-            href={`https://github.com/user-attachments/files/15969020/Mern.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/your-profile/resume.pdf" // Replace with valid URL
+            passHref
           >
             My Resume
           </Link>
