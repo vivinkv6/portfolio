@@ -9,12 +9,21 @@ import { DivBoundary, SectionBoundary, SpanBoundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: `I recently completed my graduation at Sri C Achuthamenon Govt
-  College Thrissur, deeply passionate about front-end development.
-  My primary focus is on the MERN stack and mobile app development
-  using React Native.`,
+  title: "About VivinKV - Web Developer & Tech Enthusiast",
+  description:
+    "VivinKV, a passionate front-end developer skilled in the MERN stack and React Native, recently graduated from Sri C Achuthamenon Govt College Thrissur. With a 2-month internship at Trebuchet Systems Kochi and experience as a Tech Lead at Tinkerhub GCT, VivinKV brings a strong foundation in both technical teaching and practical development. Enthusiastic about TypeScript and React, VivinKV actively participates in Tech Fests in the Thrissur region.",
+  keywords: ["about vivin-kv", "about vivin", "web developer", "tech enthusiast",'about vivin kv'],
+  openGraph: {
+    title: "About VivinKV - Web Developer & Tech Enthusiast",
+    description:
+      "Learn more about VivinKV, a skilled MERN stack and React Native developer. Recently graduated from Sri C Achuthamenon Govt College, with experience as a front-end developer at Trebuchet Systems and Tech Lead at Tinkerhub GCT.",
+    type: "website",
+    siteName: "VivinKV",
+    locale: "en_US",
+    url: `${process.env.URL}/about`,
+  },
 };
+
 
 const AboutPage: React.FC = () => {
   return (

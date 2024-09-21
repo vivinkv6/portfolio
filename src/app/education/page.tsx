@@ -4,10 +4,35 @@ import Link from "next/link";
 import { header } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Education",
-  keywords:['sri-c-achuthamenon-govt-college-kuttanellur-thrissur','cnn-hss-cherpu-thrissur']
+  title: "VivinKV - Education Background",
+  description:
+    "VivinKV's educational background includes a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur (2021-2024) and a Commerce education from CNN Higher Secondary School (2019-2021). These foundations laid the groundwork for his expertise in web development, particularly focusing on the MERN stack and mobile app development.",
+  keywords: [
+    "vivin kv education",
+    "sri c achutha menon govt college",
+    "cnn higher secondary school",
+    "bsc computer science",
+    "thrissur education",
+    "kerala colleges",
+    "computer science graduate",
+    "commerce background",
+    "tech education",
+    "kerala higher education",
+    "vivin kv educational qualifications"
+  ],
+  openGraph: {
+    title: "VivinKV - Educational Background",
+    description:
+      "VivinKV graduated with a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur and completed his higher secondary education in Commerce at CNN Higher Secondary School. These academic experiences are pivotal to his growth as a skilled developer.",
+    type: "website",
+    siteName: "VivinKV",
+    locale: "en_US",
+    url: `${process.env.URL}/education`,
+  },
 };
+
 const Education = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white">

@@ -5,10 +5,39 @@ import { header } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
-  title: "Experience",
-  keywords: ["tinkerhub", "trebuchet"],
+  title: "VivinKV - Work Experience",
+  description:
+    "Discover VivinKV's professional experience as a Front End Intern at Trebuchet Systems and a Technical Lead at TinkerHub GCT, showcasing skills in front-end development and tech education.",
+  keywords: [
+    "VivinKV experience",
+    "Trebuchet Systems internship",
+    "TinkerHub GCT",
+    "front end intern",
+    "technical lead",
+    "web development internship",
+    "technology workshops",
+    "front-end development",
+    "user interface design",
+    "Git version control",
+    "technical training",
+    "student workshops",
+    "professional experience",
+    "tech education",
+    "team collaboration",
+  ],
+  openGraph: {
+    title: "VivinKV - Work Experience",
+    description:
+      "A detailed overview of VivinKV's work experience, highlighting roles at Trebuchet Systems and TinkerHub GCT, focusing on front-end development and technical leadership.",
+    type: "website",
+    siteName: "VivinKV",
+    locale: "en_US",
+    url: `${process.env.URL}/experience`,
+  },
 };
+
 const ExperiencePage = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-200 p-4 md:p-8">

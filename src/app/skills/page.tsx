@@ -7,8 +7,34 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Skills",
-  keywords:['html','css','javascript','react-js','next-js','mongo-db','postgresql','express-js','typescript','node-js']
+  title: "VivinKV - Skills in Front-End & Back-End Technologies",
+  description:
+    "VivinKV is proficient in a wide array of front-end and back-end technologies, including Next.js, React.js, Node.js, Express.js, MongoDB, PostgreSQL, JavaScript, TypeScript, Git, Tailwind CSS, and more. With expertise in both web and mobile app development, VivinKV brings a strong command of the MERN stack and additional tools such as GitHub, Vercel, and Strapi for creating dynamic and scalable applications.",
+  keywords: [
+    "vivin-kv skills",
+    "vivin kv web developer",
+    "next js developer",
+    "react js developer",
+    "node js developer",
+    "express js developer",
+    "mern stack developer",
+    "full-stack web development",
+    "front-end development",
+    "back-end development",
+    "mongodb developer",
+    "postgresql developer",
+    "javascript developer",
+    "typescript developer",
+  ],
+  openGraph: {
+    title: "VivinKV - Skills in Front-End & Back-End Technologies",
+    description:
+      "Explore VivinKV's diverse skill set, covering technologies like Next.js, React.js, Node.js, MongoDB, TypeScript, Git, and more. VivinKV excels in developing scalable applications using modern web development tools.",
+    type: "website",
+    siteName: "VivinKV",
+    locale: "en_US",
+    url: `${process.env.URL}/skills`,
+  },
 };
 function page() {
   return (
@@ -31,16 +57,15 @@ function page() {
               transition={{ duration: 0.5, delay: skill.id * 0.1 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              {skill?.logo && (
-                skill?.link &&
+              {skill?.logo && skill?.link && (
                 <Link href={skill?.link}>
-                <Image
-                  src={skill?.logo}
-                  alt={skill.name}
-                  unoptimized
-                  height={150}
-                  width={150}
-                />
+                  <Image
+                    src={skill?.logo}
+                    alt={skill.name}
+                    unoptimized
+                    height={150}
+                    width={150}
+                  />
                 </Link>
               )}
             </DivBoundary>

@@ -6,10 +6,45 @@ import { header, projectHeader } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
-  title: "Projects",
-  keywords: ["movie-dashboard", "finance-dashboard", "techconnect-hub",'pexel-clone','github-clone','youtube-clone'],
+  title: "VivinKV - Projects",
+  description:
+    "Explore VivinKV's web and mobile development projects including a Daily Dev Clone, Finance Dashboard, Movie Dashboard, and more, showcasing expertise in React, TypeScript, Node.js, and modern web technologies.",
+  keywords: [
+    "VivinKV projects",
+    "Daily Dev Clone",
+    "Finance Dashboard",
+    "Movie Dashboard",
+    "React projects",
+    "TypeScript projects",
+    "Next.js projects",
+    "Node.js projects",
+    "Express.js projects",
+    "MERN stack projects",
+    "Web development portfolio",
+    "Frontend development projects",
+    "Backend development projects",
+    "Mobile app development projects",
+    "React Native projects",
+    "GitHub Clone project",
+    "YouTube Clone project",
+    "Tailwind CSS",
+    "Bootstrap projects",
+    "MongoDB projects",
+    "PostgreSQL projects",
+  ],
+  openGraph: {
+    title: "VivinKV - Projects",
+    description:
+      "A showcase of VivinKV's development portfolio, including web and mobile applications built with modern technologies like React, TypeScript, Next.js, and more.",
+    type: "website",
+    siteName: "VivinKV",
+    locale: "en_US",
+    url: `${process.env.URL}/projects`,
+  },
 };
+
 function page() {
   return (
     <main className="container mx-auto p-4 bg-gray-950">
