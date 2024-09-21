@@ -6,16 +6,17 @@ import opengraph from "@/app/opengraph-image.jpg";
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
   title:
-    "Hello I'm Vivin KV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
+    "VivinKV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
   alternates: {
     canonical: {
       title: "VivinKV",
       url: `${process.env.URL}`,
       username: "vivinkv",
+
     },
   },
   description:
-    "Passionate about creating robust and scalable web applications. Experienced in both front-end and back-end technologies, with a knack for problem-solving and delivering high-quality code.",
+    "Passionate about creating scalable web applications, skilled in both front-end and back-end technologies.",
   keywords: [
     "vivin-kv",
     "vivin",
@@ -25,6 +26,8 @@ export const metadata: Metadata = {
     "Vivin KV",
     "Vivin-KV",
     "VivinKV",
+    "Web Developer",
+    "Tech Enthusiast"
   ],
   openGraph: {
     title: "Vivin KV - Passionate Web Developer",
