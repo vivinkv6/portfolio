@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
   title:
     "VivinKV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
+    robots:{
+      index:true
+    },
   alternates: {
     canonical: {
       title: "VivinKV",
