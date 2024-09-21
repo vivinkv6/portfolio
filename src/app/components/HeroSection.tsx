@@ -12,29 +12,6 @@ import Head from "next/head";
 function HeroSection() {
   return (
     <>
-      {/* Adding JSON-LD Schema for better SEO */}
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Vivin KV",
-              jobTitle: "Next js Developer at Spiderworks Technologies",
-              url: "https://www.vivinkv.me",
-              sameAs: [
-                "https://github.com/vivinkv6",
-                "https://in.linkedin.com/in/vivin-k-v-8816ba291",
-                "mailto:vivinkv851@gmail.com",
-              ],
-              description:
-                "Passionate about creating robust and scalable web applications. Experienced in both front-end and back-end technologies, with a knack for problem-solving and delivering high-quality code.",
-            }),
-          }}
-        />
-      </Head>
-
       <main className="container mx-auto px-4 pt-24">
         <SectionBoundary
           initial={{ opacity: 0, y: 20 }}
