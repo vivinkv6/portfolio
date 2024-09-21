@@ -66,7 +66,7 @@ function HeroSection() {
             </Link>
           </SpanBoundary>
         </div> */}
-        <button className="mt-5 bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded font-semibold">
+        {/* <button className="mt-5 bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded font-semibold">
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -75,7 +75,7 @@ function HeroSection() {
           >
             My Resume
           </Link>
-        </button>
+        </button> */}
       </SectionBoundary>
     </main>
   );
