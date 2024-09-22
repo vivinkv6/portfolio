@@ -14,9 +14,9 @@ function HeroSection() {
     <>
       <main className="container mx-auto px-4 pt-24">
         <SectionBoundary
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.5 }}
           className="text-center py-20"
         >
           <Heading1Boundary className="text-5xl max-sm:text-4xl font-bold mb-6">

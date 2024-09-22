@@ -7,15 +7,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
   title:
     "VivinKV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
-    robots:{
-      index:true
-    },
+  robots: {
+    index: true,
+  },
   alternates: {
     canonical: {
       title: "VivinKV",
       url: `${process.env.URL}`,
       username: "vivinkv",
-
     },
   },
   description:
@@ -30,7 +29,9 @@ export const metadata: Metadata = {
     "Vivin-KV",
     "VivinKV",
     "Web Developer",
-    "Tech Enthusiast"
+    "Tech Enthusiast",
+    "next js developer",
+    "i'm vivin kv",
   ],
   openGraph: {
     title: "Vivin KV - Passionate Web Developer",
