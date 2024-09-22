@@ -5,8 +5,7 @@ import opengraph from "@/app/opengraph-image.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
-  title:
-    "VivinKV - Web Developer & Tech Enthusiast Crafting Innovative Solutions",
+  title: "Vivin KV Next js Developer at Spiderworks Technologies",
   robots: {
     index: true,
   },
@@ -34,13 +33,35 @@ export const metadata: Metadata = {
     "i'm vivin kv",
   ],
   openGraph: {
-    title: "Vivin KV - Passionate Web Developer",
+    title: "Vivin KV Nextjs Developer at Spiderworks Technologies",
     description:
       "Passionate about creating scalable web applications.Skilled in front-end and back-end technologies,with a knack for problem-solving and high-quality code.",
     type: "website",
     siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}`,
+    images: [
+      {
+        url: `${process.env.URL}/opengraph-image.png`,
+        username: "vivinkv",
+        alt: "vivin kv",
+      },
+    ],
+  },
+  twitter: {
+    title: "vivinkv next js developer at spiderworks technologies",
+    card: "summary",
+    creator: "vivinkv",
+    description:
+      "Passionate about creating scalable web applications.Skilled in front-end and back-end technologies,with a knack for problem-solving and high-quality code.",
+    images: [
+      {
+        url: `${process.env.URL}/opengraph-image.png`,
+        username: "vivinkv",
+        alt: "vivin kv",
+      },
+    ],
+    site: "VIVIN KV",
   },
 };
 
