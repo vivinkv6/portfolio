@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "@/app/components/HeroSection";
+import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
 import opengraph from "@/app/opengraph-image.jpg";
 

@@ -5,6 +5,49 @@ import { header } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import Link from "next/link";
 import { Metadata } from "next";
+import IconCloud from "@/components/ui/icon-cloud";
+
+const slugs = [
+  "nextdotjs",
+  "react",
+  "nodedotjs",
+  "express",
+  "mongodb",
+  "postgresql",
+  "html",
+  "css",
+  "javascript",
+  "typescript",
+  "git",
+  "github",
+  "tailwindcss",
+  "bootstrap",
+  "sequelize",
+  "trello",
+  "vercel",
+  "vite",
+  "visualstudiocode",
+  "canva",
+  "strapi",
+  "docker",
+  "python",
+  "java",
+  "cplusplus",
+  "c",
+  "netlify",
+  "render",
+  "mui",
+  "mongoose",
+  "prisma",
+  "ubuntu",
+  "strapi",
+  "sanity",
+  "reactrouter",
+  "reactquery",
+  "postman",
+  "notion",
+  "trello"
+];
 
 export const metadata: Metadata = {
   title: "VivinKV - Skills in Front-End & Back-End Technologies",
@@ -39,7 +82,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      <main className="flex flex-col items-center p-8 ">
+      <main className="flex flex-col p-8 ">
         <Heading1Boundary
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,7 +91,7 @@ function page() {
         >
           Skills
         </Heading1Boundary>
-        <div className="grid grid-cols-4 gap-6 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8">
+        {/* <div className="grid grid-cols-4 gap-6 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8">
           {skills.map((skill) => (
             <DivBoundary
               key={skill.id}
@@ -70,7 +113,10 @@ function page() {
               )}
             </DivBoundary>
           ))}
-        </div>
+        </div> */}
+        
+      <IconCloud iconSlugs={slugs} />
+  
       </main>
     </div>
   );
