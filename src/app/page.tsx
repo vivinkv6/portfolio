@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: `${process.env.URL}`,
     images: [
       {
-        url: `${process.env.URL}/opengraph-image.png`,
+        url: `${process.env.URL}/opengraph-image.jpg`,
         username: "vivinkv",
         alt: "vivin kv",
       },
