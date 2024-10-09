@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Passionate about creating scalable web applications.Skilled in front-end and back-end technologies,with a knack for problem-solving and high-quality code.",
     images: [
       {
-        url: `${process.env.URL}/opengraph-image.png`,
+        url: `${process.env.URL}/opengraph-image.jpg`,
         username: "vivinkv",
         alt: "vivin kv",
       },
