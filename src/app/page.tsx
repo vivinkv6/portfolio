@@ -102,12 +102,12 @@ const HomePage = () => {
 
         {skills.slice(2, 21).map((skill, index) => {
           const { radius, duration, delay, reverse } = getRandomOrbitConfig();
-          const responsiveRadius = typeof window !== "undefined" && window.innerWidth <= 768 ? radius / 2 : radius;
+         
           return (
             <OrbitingCircles
               key={index}
               className="size-[30px] border-none bg-transparent z-[-1] brightness-50"
-              radius={responsiveRadius}
+              radius={radius}
               duration={duration}
               delay={delay}
               reverse={reverse}
