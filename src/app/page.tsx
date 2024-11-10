@@ -94,6 +94,7 @@ const HomePage = () => {
         flickerChance={0.1}
       />
 
+
       <div className="relative flex items-center  h-[100dvh] w-full flex-col  justify-center overflow-hidden rounded-lg  md:shadow-xl">
         <HeroSection />
 
@@ -102,7 +103,7 @@ const HomePage = () => {
           return (
             <OrbitingCircles
               key={index}
-              className="size-[30px] border-none bg-transparent brightness-50"
+              className="size-[30px] border-none bg-transparent z-[-1] brightness-50"
               radius={radius}
               duration={duration}
               delay={delay}

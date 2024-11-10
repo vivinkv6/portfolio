@@ -100,7 +100,7 @@ async function Page({ params }: { params: { slug: string } }) {
         }).format(new Date(post.published))}
       </h6>
       <h1
-        className={`text-4xl max-lg:text-3xl max-sm:text-xl xl:w-[60%] font-[500] ${projectHeader.className}`}
+        className={`text-4xl max-lg:text-3xl max-sm:text-2xl xl:w-[60%] font-[500] ${projectHeader.className}`}
       >
         {post.title}
       </h1>
