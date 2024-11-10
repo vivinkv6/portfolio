@@ -7,7 +7,10 @@ import Link from "next/link";
 import {mainFont, paraContent} from "@/app/font";
 import {DivBoundary, SectionBoundary, SpanBoundary} from "@/lib/animBoundary";
 import {Metadata} from "next";
-import Cube from "@/components/Cube";
+import dynamic from "next/dynamic";
+
+
+const Cube=dynamic(()=>import("@/components/Cube"),{ssr:false})
 
 export const metadata: Metadata = {
     title: "About VivinKV - Web Developer & Tech Enthusiast",
@@ -64,9 +67,9 @@ const AboutPage: React.FC = () => {
                             {/*    unoptimized*/}
                             {/*    className="rounded-lg max-sm:hidden"*/}
                             {/*/>*/}
-                            <Suspense fallback={<div>Loading...</div>}>
+                           
                             <Cube/>
-                            </Suspense>
+                            
                         </DivBoundary>
                         <div
                             className={`w-full md:w-1/2 text-gray-400 text-xl max-lg:text-lg max-sm:text-sm font-[400] ${mainFont.className}`}

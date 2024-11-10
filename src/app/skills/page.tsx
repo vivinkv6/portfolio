@@ -5,7 +5,9 @@ import {header, mainFont} from "@/app/font";
 import {DivBoundary, Heading1Boundary} from "@/lib/animBoundary";
 import Link from "next/link";
 import {Metadata} from "next";
-import IconCloud from "@/components/ui/icon-cloud";
+import dynamic from "next/dynamic";
+
+const IconCloud=dynamic(()=>import("@/components/ui/icon-cloud"),{ssr:false})
 
 const slugs = [
     "nextdotjs",

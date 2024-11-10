@@ -10,7 +10,9 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { mainFont } from "@/app/font";
 import Image from "next/image";
 import { skills } from "@/lib/data";
-import WordRotate from "./ui/word-rotate";
+import dynamic from "next/dynamic";
+
+const WordRotate=dynamic(()=>import("./ui/word-rotate"),{ssr:false})
 
 function HeroSection() {
   const iconSize = 50; // Size of the skill icons

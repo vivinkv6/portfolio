@@ -2,11 +2,12 @@ import React from "react";
 import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
 import opengraph from "@/app/opengraph-image.jpg";
-import FlickeringGrid from "@/components/ui/flickering-grid";
 import DesktopModel from "@/components/Desktop";
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import { skills } from "@/lib/data";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const FlickeringGrid=dynamic(()=>import('@/components/ui/flickering-grid'),{ssr:false})
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
@@ -100,7 +101,7 @@ const HomePage = () => {
       <div className="relative flex items-center  h-[100dvh] w-full flex-col  justify-center overflow-hidden rounded-lg  md:shadow-xl">
         <HeroSection />
 
-        {skills.slice(2, 21).map((skill, index) => {
+        {skills.slice(2, 15).map((skill, index) => {
           const { radius, duration, delay, reverse } = getRandomOrbitConfig();
          
           return (
