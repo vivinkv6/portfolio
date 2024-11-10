@@ -71,8 +71,11 @@ export const metadata: Metadata = {
 };
 
 function getRandomOrbitConfig() {
+  const isMobile: boolean =
+    typeof window !== "undefined" && window.innerWidth < 640;
   return {
-    radius: Math.floor(Math.random() * 800) + 200, // Random radius between 200 and 1000
+    radius:
+      Math.floor(isMobile ? Math.random() * 200 : Math.random() * 800) + 200, // Random radius between 200 and 1000
     duration: Math.floor(Math.random() * 50) + 20, // Random duration between 20s and 70s
     delay: Math.floor(Math.random() * 30), // Random delay between 0s and 30s
     reverse: Math.random() > 0.5, // Randomly choose direction
@@ -94,20 +97,21 @@ const HomePage = () => {
         flickerChance={0.1}
       />
 
-
       <div className="relative flex items-center  h-[100dvh] w-full flex-col  justify-center overflow-hidden rounded-lg  md:shadow-xl">
         <HeroSection />
 
         {skills.slice(2, 21).map((skill, index) => {
           const { radius, duration, delay, reverse } = getRandomOrbitConfig();
+          const responsiveRadius = typeof window !== "undefined" && window.innerWidth <= 768 ? radius / 2 : radius;
           return (
             <OrbitingCircles
               key={index}
               className="size-[30px] border-none bg-transparent z-[-1] brightness-50"
-              radius={radius}
+              radius={responsiveRadius}
               duration={duration}
               delay={delay}
               reverse={reverse}
+              path={false}
             >
               <Image
                 src={skill.logo ?? ""}
