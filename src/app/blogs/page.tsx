@@ -9,6 +9,9 @@ import { getFeaturedImage } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "VivinKV - Blogs",
+  robots: {
+    index: true,
+  },
   description:
     "Dive into VivinKV's insightful blogs covering web development, mobile app creation, and tech tutorials. Explore tips, guides, and project highlights using React, Next.js, TypeScript, and more.",
   keywords: [

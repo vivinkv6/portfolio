@@ -11,6 +11,9 @@ import Cube from "@/components/Cube";
 
 export const metadata: Metadata = {
     title: "About VivinKV - Web Developer & Tech Enthusiast",
+    robots:{
+        index:true
+    },
     description:
         "VivinKV, a passionate front-end developer skilled in the MERN stack and React Native, recently graduated from Sri C Achuthamenon Govt College Thrissur. With a 2-month internship at Trebuchet Systems Kochi and experience as a Tech Lead at Tinkerhub GCT, VivinKV brings a strong foundation in both technical teaching and practical development. Enthusiastic about TypeScript and React, VivinKV actively participates in Tech Fests in the Thrissur region.",
     keywords: ["about vivin-kv", "about vivin", "web developer", "tech enthusiast", 'about vivin kv'],

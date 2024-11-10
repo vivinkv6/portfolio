@@ -51,6 +51,10 @@ const slugs = [
 
 export const metadata: Metadata = {
     title: "VivinKV - Skills in Front-End & Back-End Technologies",
+    robots:{
+      index: true,
+      
+    },
     description:
         "VivinKV is proficient in a wide array of front-end and back-end technologies, including Next.js, React.js, Node.js, Express.js, MongoDB, PostgreSQL, JavaScript, TypeScript, Git, Tailwind CSS, and more. With expertise in both web and mobile app development, VivinKV brings a strong command of the MERN stack and additional tools such as GitHub, Vercel, and Strapi for creating dynamic and scalable applications.",
     keywords: [

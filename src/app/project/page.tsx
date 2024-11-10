@@ -9,6 +9,9 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: "VivinKV - Projects",
+    robots:{
+        index:true
+    },
     description:
         "Explore VivinKV's web and mobile development projects including a Daily Dev Clone, Finance Dashboard, Movie Dashboard, and more, showcasing expertise in React, TypeScript, Node.js, and modern web technologies.",
     keywords: [

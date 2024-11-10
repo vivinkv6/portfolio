@@ -8,6 +8,9 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: "VivinKV - Work Experience",
+    robots:{
+        index:true
+    },
     description:
         "Discover VivinKV's professional experience as a Front End Intern at Trebuchet Systems and a Technical Lead at TinkerHub GCT, showcasing skills in front-end development and tech education.",
     keywords: [

@@ -7,6 +7,9 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: "VivinKV - Education Background",
+    robots:{
+        index:true
+    },
     description:
         "VivinKV's educational background includes a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur (2021-2024) and a Commerce education from CNN Higher Secondary School (2019-2021). These foundations laid the groundwork for his expertise in web development, particularly focusing on the MERN stack and mobile app development.",
     keywords: [

@@ -55,6 +55,13 @@ export async function generateMetadata({
 
   return {
     title: post.title,
+    robots:{
+        index:true
+    },
+    authors:[{
+      name:post.author.displayName,
+      url:post.author.url
+    }],
     keywords: [post.title.replace(" ", "-").toLowerCase(), ...keywords],
     description:
       post.content.replace(/<[^>]*>?/gm, "").substring(0, 150) + "...",
