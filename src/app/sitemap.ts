@@ -1,6 +1,12 @@
 import { MetadataRoute } from "next";
+import { BloggerResponse } from "./blogs/page";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const blogList = await fetch(
+    `https://www.googleapis.com/blogger/v3/blogs/${process.env.BLOG_ID}/posts?key=${process.env.BLOGGER_API_KEY}`
+  );
+  const blog: BloggerResponse = await blogList.json();
+
   return [
     {
       url: `${process.env.URL}`,
@@ -26,5 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${process.env.URL}/project`,
       priority: 0.5,
     },
+    {
+      url: `${process.env.URL}/blogs`,
+      priority: 0.4,
+    },
+    ...blog.items.map((post) => ({
+      url: `${process.env.URL}/blogs/${post.id}`,
+      priority: 0.3,
+    })),
   ];
 }

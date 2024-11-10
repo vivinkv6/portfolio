@@ -11,7 +11,7 @@ import Project7 from "/public/project/project7.png";
 import Project8 from "/public/project/project8.png";
 import Project9 from "/public/project/project9.png";
 import Project10 from "/public/project/project10.png";
-import Project11 from '/public/project/project11.png';
+import Project11 from "/public/project/project11.png";
 
 //education
 import College from "/public/education/college.png";
@@ -38,7 +38,16 @@ import vscode from "/public/skills/vscode.png";
 import canva from "/public/skills/canva.png";
 import vite from "/public/skills/vite.png";
 import trello from "/public/skills/trello.png";
-import strapi from "/public/skills/strapi.png"
+import strapi from "/public/skills/strapi.png";
+
+//about
+
+import Picture1 from "/public/about/pic1.jpg";
+import Picture2 from "/public/about/pic2.jpg";
+import Picture3 from "/public/about/pic3.jpg";
+import Picture4 from "/public/about/pic4.jpg";
+import Picture5 from "/public/about/pic5.jpg";
+import Picture6 from "/public/about/pic6.jpg";
 
 type Link = {
   id: number;
@@ -114,6 +123,11 @@ export const navLinks: Link = [
     id: 6,
     name: "Project",
     link: "/project",
+  },
+  {
+    id: 7,
+    name: "Blogs",
+    link: "/blogs",
   },
 ];
 
@@ -660,4 +674,13 @@ export const projects: Project = [
       },
     ],
   },
+];
+
+export const AboutPage: string[] = [
+  "/about/pic1.jpg",
+  "/about/pic2.jpg",
+  "/about/pic3.jpg",
+  "/about/pic4.jpg",
+  "/about/pic5.jpg",
+  "/about/pic6.jpg",
 ];

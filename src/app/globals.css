@@ -86,3 +86,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Waving hand animation */
+@keyframes wave {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(14deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0); }
+}
+.animate-wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Counter animation for binary code */
+@keyframes binaryCounter {
+  0% { content: "101010"; }
+  20% { content: "010101"; }
+  40% { content: "110011"; }
+  60% { content: "001100"; }
+  80% { content: "111000"; }
+  100% { content: "000111"; }
+}
+
+.binary-code::after {
+  content: "101010";
+  display: inline-block;
+  font-size: 1em;
+  color: #32CD32; /* Green color for digital effect */
+  animation: binaryCounter 2s infinite steps(1);
+}
+
