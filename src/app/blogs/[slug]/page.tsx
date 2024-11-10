@@ -55,13 +55,15 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    robots:{
-        index:true
+    robots: {
+      index: true,
     },
-    authors:[{
-      name:post.author.displayName,
-      url:post.author.url
-    }],
+    authors: [
+      {
+        name: post.author.displayName,
+        url: post.author.url,
+      },
+    ],
     keywords: [post.title.replace(" ", "-").toLowerCase(), ...keywords],
     description:
       post.content.replace(/<[^>]*>?/gm, "").substring(0, 150) + "...",
@@ -99,7 +101,9 @@ async function Page({ params }: { params: { slug: string } }) {
   const post: BlogPost = await postDetail.json();
   return (
     <div className="bg-gray-950 mt-32 text-white px-20 max-sm:px-5">
-      <h6 className={`font-[200] mb-2 text-gray-500 ${projectHeader.className}`}>
+      <h6
+        className={`font-[200] mb-2 text-gray-500 ${projectHeader.className}`}
+      >
         {new Intl.DateTimeFormat("en-US", {
           year: "numeric",
           month: "long",
@@ -112,14 +116,16 @@ async function Page({ params }: { params: { slug: string } }) {
         {post.title}
       </h1>
       <div className="flex flex-wrap gap-2 mt-5 xl:w-[80%]">
-        {post.labels.map((label,index)=>{
-          return(
-            <p key={index} className="text-gray-400 text-sm rounded border border-gray-600 p-1">
-                    {label}
-                  </p>
-          )
+        {post.labels.map((label, index) => {
+          return (
+            <p
+              key={index}
+              className="text-gray-400 text-sm rounded border border-gray-600 p-1"
+            >
+              {label}
+            </p>
+          );
         })}
-        
       </div>
       {/* <div className="flex items-center gap-x-2 mt-5">
         <Image
@@ -134,16 +140,14 @@ async function Page({ params }: { params: { slug: string } }) {
       <div className="w-full flex justify-center">
         <div
           className="
-          prose 
-          max-w-3xl 
-          lg:prose-lg 
-          max-sm:prose-md 
-          prose-headings:text-white 
-          prose-h1:text-5xl prose-h1:font-bold prose-h1:leading-tight
-          prose-h2:text-4xl prose-h2:font-semibold prose-h2:leading-snug 
-          prose-h3:text-3xl prose-h3:font-medium prose-h3:leading-relaxed 
-          prose-h4:text-2xl prose-h4:font-normal prose-h4:leading-normal 
-          prose-p:text-gray-400 prose-p:text-lg 
+            max-w-3xl
+          prose-hr:border-gray-600
+          prose-headings:text-gray-200
+            prose-headings:font-[800]
+            prose-headings:w-[90%]
+            prose-headings:my-5
+          prose-p:text-gray-400 prose-p:text-md
+          prose-p:my-5 
           text-white
         "
           dangerouslySetInnerHTML={{ __html: post.content }}
