@@ -14,19 +14,23 @@ export const metadata: Metadata = {
   },
   description:
     "Dive into VivinKV's insightful blogs covering web development, mobile app creation, and tech tutorials. Explore tips, guides, and project highlights using React, Next.js, TypeScript, and more.",
-  keywords: [
-    "VivinKV blogs",
-    "web development blogs",
-    "mobile development articles",
-    "React tutorials",
-    "Next.js guides",
-    "TypeScript blog",
-    "JavaScript tutorials",
-    "tech insights",
-    "frontend development blog",
-    "coding tips blog",
-    "software development posts",
-  ],
+keywords: [
+  "Vivin KV blogs",
+  "web development blog",
+  "frontend development articles",
+  "React tutorials and tips",
+  "Next.js development blog",
+  "TypeScript guides",
+  "JavaScript tutorials",
+  "mobile app development blogs",
+  "tech insights by Vivin KV",
+  "coding tips and tricks",
+  "MERN stack tutorials",
+  "software development blog",
+  "Vivin KV coding articles",
+  "programming tips blog",
+  "latest tech trends"
+],
   openGraph: {
     title: "VivinKV - Blogs",
     description:
