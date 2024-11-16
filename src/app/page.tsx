@@ -24,20 +24,23 @@ export const metadata: Metadata = {
   },
   description:
     "Passionate about creating scalable web applications, skilled in both front-end and back-end technologies.",
-  keywords: [
-    "vivin-kv",
-    "vivin",
-    "vivin_kv",
-    "vivinkv",
-    "vivin kv",
-    "Vivin KV",
-    "Vivin-KV",
-    "VivinKV",
-    "Web Developer",
-    "Tech Enthusiast",
-    "next js developer",
-    "i'm vivin kv",
-  ],
+keywords: [
+  "Vivin KV",
+  "vivinkv",
+  "vivin-kv",
+  "vivin kv portfolio",
+  "Vivin KV web developer",
+  "Vivin KV tech enthusiast",
+  "Vivin KV Next.js developer",
+  "web developer Vivin KV",
+  "Next.js developer",
+  "MERN stack developer",
+  "front-end developer Vivin KV",
+  "React developer Vivin KV",
+  "Vivin KV blog",
+  "Vivin KV projects",
+  "Vivin KV official website"
+],
   openGraph: {
     title: "Vivin KV Nextjs Developer at Spiderworks Technologies",
     description:
