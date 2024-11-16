@@ -19,7 +19,23 @@ export const metadata: Metadata = {
     },
     description:
         "VivinKV, a passionate front-end developer skilled in the MERN stack and React Native, recently graduated from Sri C Achuthamenon Govt College Thrissur. With a 2-month internship at Trebuchet Systems Kochi and experience as a Tech Lead at Tinkerhub GCT, VivinKV brings a strong foundation in both technical teaching and practical development. Enthusiastic about TypeScript and React, VivinKV actively participates in Tech Fests in the Thrissur region.",
-    keywords: ["about vivin-kv", "about vivin", "web developer", "tech enthusiast", 'about vivin kv'],
+   keywords: [
+  "About Vivin KV",
+  "Who is Vivin KV",
+  "Vivin KV web developer",
+  "Vivin KV portfolio",
+  "Tech enthusiast Vivin KV",
+  "MERN stack developer",
+  "Front-end developer",
+  "Next.js developer",
+  "React developer",
+  "Vivin KV biography",
+  "Vivin KV about page",
+  "Web developer from Kerala",
+  "Vivin KV projects and career",
+  "Learn about Vivin KV",
+  "Vivin KV official bio"
+],
     openGraph: {
         title: "About VivinKV - Web Developer & Tech Enthusiast",
         description:
