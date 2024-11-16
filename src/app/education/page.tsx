@@ -12,19 +12,21 @@ export const metadata: Metadata = {
     },
     description:
         "VivinKV's educational background includes a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur (2021-2024) and a Commerce education from CNN Higher Secondary School (2019-2021). These foundations laid the groundwork for his expertise in web development, particularly focusing on the MERN stack and mobile app development.",
-    keywords: [
-        "vivin kv education",
-        "sri c achutha menon govt college",
-        "cnn higher secondary school",
-        "bsc computer science",
-        "thrissur education",
-        "kerala colleges",
-        "computer science graduate",
-        "commerce background",
-        "tech education",
-        "kerala higher education",
-        "vivin kv educational qualifications"
-    ],
+   keywords: [
+  "Vivin KV education",
+  "Vivin KV educational background",
+  "BSc Computer Science graduate",
+  "Sri C Achutha Menon Govt College Thrissur",
+  "CNN Higher Secondary School Cherpu",
+  "Kerala education journey",
+  "computer science graduate from Kerala",
+  "Thrissur colleges",
+  "Kerala higher education",
+  "commerce with computer applications",
+  "tech enthusiast education story",
+  "Vivin KV education qualifications",
+  "Vivin KV college and schooling"
+],
     openGraph: {
         title: "VivinKV - Educational Background",
         description:
