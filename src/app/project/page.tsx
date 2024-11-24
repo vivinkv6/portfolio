@@ -57,11 +57,11 @@ function page() {
                 transition={{duration: 0.5}}
                 className={`${mainFont.className} text-4xl font-bold mb-8 my-20 text-white`}
             >
-                Projects
+                {projects?.title}
             </Heading1Boundary>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {projects.map((project, index) => (
+                {projects?.projects.map((project, index) => (
                     <DivBoundary
                         key={project.id}
                         initial={{opacity: 0, y: 20}}

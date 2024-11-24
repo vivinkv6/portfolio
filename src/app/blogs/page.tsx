@@ -1,5 +1,5 @@
 import React from "react";
-import { projects } from "@/lib/data";
+import { blog, projects } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import { header, mainFont, projectHeader } from "@/app/font";
@@ -104,7 +104,7 @@ async function page() {
         transition={{ duration: 0.5 }}
         className={`${mainFont.className} text-4xl font-bold mb-8 my-20 text-white`}
       >
-        Blogs
+        {blog?.title}
       </Heading1Boundary>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">

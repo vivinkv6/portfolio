@@ -9,10 +9,10 @@ import Link from "next/link";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { mainFont } from "@/app/font";
 import Image from "next/image";
-import { skills } from "@/lib/data";
+import { homeContent, skills } from "@/lib/data";
 import dynamic from "next/dynamic";
 
-const WordRotate=dynamic(()=>import("./ui/word-rotate"),{ssr:false})
+const WordRotate = dynamic(() => import("./ui/word-rotate"), { ssr: false });
 
 function HeroSection() {
   const iconSize = 50; // Size of the skill icons
@@ -20,30 +20,28 @@ function HeroSection() {
   return (
     <main className="container relative mx-auto px-4 pt-24 flex flex-col items-center">
       <SectionBoundary className="text-center py-20 relative z-10">
-  <Heading1Boundary
-    className={`text-6xl max-sm:text-4xl text-white font-bold mb-6 ${mainFont.className}`}
-  >
-    Hello I'm Vivin KV
-    <span className="ml-2 animate-wave">👋</span>
-  </Heading1Boundary>
-  <Heading2Boundary
-    className={`text-4xl max-sm:text-2xl text-blue-400 mb-8 ${mainFont.className} flex flex-wrap justify-center items-center gap-x-2 font-semibold`}
-  >
-    I'm a{" "}
-    <WordRotate
-      className="text-4xl max-sm:text-2xl font-semibold text-blue-400"
-      words={["Front-End", "Back-End", "Full-Stack"]}
-    />
-    Developer
-    {/* <span className="binary-code ml-2"></span> */}
-  </Heading2Boundary>
-  <ParagraphBoundary
-    className={`text-2xl max-md:text-sm max-w-2xl mx-auto mb-6 text-gray-400 ${mainFont.className} font-light`}
-  >
-    Passionate about creating robust and scalable web applications.
-    Experienced in both front-end and back-end technologies, with a knack
-    for problem-solving and delivering high-quality code.
-  </ParagraphBoundary>
+        <Heading1Boundary
+          className={`text-6xl max-sm:text-4xl text-white font-bold mb-6 ${mainFont.className}`}
+        >
+          {homeContent?.title?.primary}
+          <span className="ml-2 animate-wave">👋</span>
+        </Heading1Boundary>
+        <Heading2Boundary
+          className={`text-4xl max-sm:text-2xl text-blue-400 mb-8 ${mainFont.className} flex flex-wrap justify-center items-center gap-x-2 font-semibold`}
+        >
+          {homeContent?.title?.secondary?.first}{" "}
+          <WordRotate
+            className="text-4xl max-sm:text-2xl font-semibold text-blue-400"
+            words={homeContent?.title?.secondary?.second}
+          />
+          {homeContent?.title?.secondary?.third}
+          {/* <span className="binary-code ml-2"></span> */}
+        </Heading2Boundary>
+        <ParagraphBoundary
+          className={`text-2xl max-md:text-sm max-w-2xl mx-auto mb-6 text-gray-400 ${mainFont.className} font-light`}
+        >
+          {homeContent?.description}
+        </ParagraphBoundary>
         <div className="flex justify-center space-x-6">
           <SpanBoundary
             whileHover={{ scale: 1.1 }}

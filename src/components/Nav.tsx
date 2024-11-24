@@ -26,12 +26,12 @@ const AboutPage: React.FC = () => {
                 className='rounded-full'
               /> */}
                     {/* </motion.div> */}
-                    <span className={`text-3xl font-bold text-white ${mainFont.className}`}>VIVIN KV</span>
+                    <span className={`text-3xl font-bold text-white ${mainFont.className}`}>{navLinks?.title}</span>
                 </Link>
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6">
-                    {navLinks.map((item) => (
+                    {navLinks?.links?.map((item) => (
                         <motion.li
                             key={item.id}
                             whileHover={{scale: 1.1}}
@@ -61,7 +61,7 @@ const AboutPage: React.FC = () => {
                         exit={{opacity: 0, y: -20}}
                         className="md:hidden bg-gray-900 py-2"
                     >
-                        {navLinks.map((item) => (
+                        {navLinks?.links.map((item) => (
                             <motion.li
                                 key={item.id}
                                 whileHover={{scale: 1.1}}

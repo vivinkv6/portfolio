@@ -50,20 +50,28 @@ import Picture5 from "/public/about/pic5.jpg";
 import Picture6 from "/public/about/pic6.jpg";
 
 type Link = {
-  id: number;
-  name: string;
-  link: string;
-}[];
+  title:string,
+  links:{
+    id: number;
+    name: string;
+    link: string;
+  }[]
+ 
+};
 
 type Education = {
-  id: number;
-  logo: StaticImageData;
-  name: string;
-  location: string;
-  course: string;
-  year: string;
-  link: string;
-}[];
+  title:string,
+  educations:{
+    id: number;
+    logo: StaticImageData;
+    name: string;
+    location: string;
+    course: string;
+    year: string;
+    link: string;
+  }[]
+  
+}
 
 type Skills = {
   id: number;
@@ -74,26 +82,36 @@ type Skills = {
 };
 
 type Project = {
-  id: number;
-  banner: StaticImageData | string;
-  name: string;
-  description: string;
-  github_link: string;
-  public_link?: string;
-  skills: Skills[];
-  mobile?: boolean;
-}[];
+  title:string,
+  projects:{
+    id: number;
+    banner: StaticImageData | string;
+    name: string;
+    description: string;
+    github_link: string;
+    public_link?: string;
+    skills: Skills[];
+    mobile?: boolean;
+  }[]
+  
+};
 
 type Experience = {
-  id: number;
-  role: string;
-  company: string;
-  date: string;
-  link: string;
-  responsibilities: string[];
-}[];
+  title:string,
+  experiences:{
+    id: number;
+    role: string;
+    company: string;
+    date: string;
+    link: string;
+    responsibilities: string[];
+  }[]
+ 
+};
 
-export const navLinks: Link = [
+export const navLinks: Link = {
+  title:"VIVIN KV",
+  links:[
   {
     id: 1,
     name: "Home",
@@ -129,9 +147,12 @@ export const navLinks: Link = [
     name: "Blogs",
     link: "/blogs",
   },
-];
-
-export const education: Education = [
+]
+}
+export const education: Education = {
+  title:"Education",
+  educations:
+  [
   {
     id: 1,
     name: "Sri C Achutha Menon Govt College",
@@ -150,9 +171,12 @@ export const education: Education = [
     year: "2019 - 2021",
     link: "https://www.facebook.com/p/CNN-Higher-Secondary-Schoolcherpu-100066789380754/",
   },
-];
+]}
 
-export const experience: Experience = [
+export const experience: Experience = {
+  title:'Experience',
+  experiences:
+  [
   {
     id: 1,
     company: "Trebuchet Systems",
@@ -178,7 +202,7 @@ export const experience: Experience = [
       " Facilitated hands-on sessions, enabling students to apply learned skills in real-world scenarios.",
     ],
   },
-];
+]}
 
 export const skills: Skills[] = [
   {
@@ -309,7 +333,10 @@ export const skills: Skills[] = [
   },
 ];
 
-export const projects: Project = [
+export const projects: Project = {
+  title:'Projects',
+  projects:
+  [
   {
     id: 1,
     banner: Project11,
@@ -674,7 +701,8 @@ export const projects: Project = [
       },
     ],
   },
-];
+]
+}
 
 export const AboutPage: string[] = [
   "/about/pic1.jpg",
@@ -684,3 +712,78 @@ export const AboutPage: string[] = [
   "/about/pic5.jpg",
   "/about/pic6.jpg",
 ];
+
+export const aboutMe: {
+  title: string;
+  sections: {
+    id: number;
+    section: string;
+  }[];
+} = {
+  title: "About Me",
+  sections: [
+    {
+      id: 1,
+      section: `  I recently completed my graduation at Sri C Achuthamenon Govt
+                                College Thrissur, deeply passionate about front-end development.
+                                My primary focus is on the MERN stack and mobile app development
+                                using React Native.`,
+    },
+    {
+      id: 2,
+      section: `  During my journey, I had the privilege of a 2-month internship
+                                at Trebuchet Systems Kochi, where I honed my skills as a
+                                front-end developer. Additionally, I served as a dedicated Tech
+                                Lead for the Tinkerhub GCT campus team under Tinkerhub,
+                                dedicating a year to teaching technical content to students from
+                                various colleges and preparing them for success in the tech
+                                industry.`,
+    },
+    {
+      id: 3,
+      section: ` I take pride in my participation in Tech Fests organized by
+                                numerous colleges in the Thrissur region, reflecting my
+                                commitment to staying at the forefront of technological
+                                advancements. JavaScript holds a special place in my heart, and
+                                I have transitioned to TypeScript for its robust type safety
+                                features. Among JavaScript libraries, React is my absolute
+                                favorite.`,
+    },
+  ],
+}
+
+export const homeContent: {
+  title: {
+    primary: string;
+    secondary: {
+      first: string;
+      second: string[];
+      third: string;
+    };
+   
+  };
+  description: string;
+} = {
+  title: {
+    primary: "Hello, I'm Vivin KV",
+    secondary: {
+      first: "I am a ",
+      second: ["Front-End", "Back-End", "Full-Stack"],
+      third: "Developer",
+    },
+   
+  },
+  description: `Passionate about creating robust and scalable web applications. Experienced in both front-end and back-end technologies, with a knack for problem-solving and delivering high-quality code.`,
+};
+
+export const skill:{
+  title: string;
+}={
+  title:"Skills"
+}
+
+export const blog:{
+  title:string
+}={
+  title:"Blogs"
+}

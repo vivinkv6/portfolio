@@ -8,6 +8,7 @@ import {mainFont, paraContent} from "@/app/font";
 import {DivBoundary, SectionBoundary, SpanBoundary} from "@/lib/animBoundary";
 import {Metadata} from "next";
 import dynamic from "next/dynamic";
+import { aboutMe } from "@/lib/data";
 
 
 const Cube=dynamic(()=>import("@/components/Cube"),{ssr:false})
@@ -61,7 +62,7 @@ const AboutPage: React.FC = () => {
                     <h1
                         className={`${mainFont.className} text-4xl max-md:my-3  font-bold mb-6`}
                     >
-                        About Me
+                        {aboutMe.title}
                     </h1>
 
                     <div className="flex flex-col md:items-start md:justify-between md:flex-row-reverse">
@@ -90,13 +91,15 @@ const AboutPage: React.FC = () => {
                         <div
                             className={`w-full md:w-1/2 text-gray-400 text-xl max-lg:text-lg max-sm:text-sm font-[400] ${mainFont.className}`}
                             style={{lineHeight: '25px'}}>
-                            <p className="mb-4">
-                                I recently completed my graduation at Sri C Achuthamenon Govt
-                                College Thrissur, deeply passionate about front-end development.
-                                My primary focus is on the MERN stack and mobile app development
-                                using React Native.
-                            </p>
-                            <p className="mb-4">
+                                {aboutMe?.sections?.map((about,index)=>{
+                                    return(
+                                        <p key={index} className={`${aboutMe?.sections?.length == index+1 ? 'mb-6':'mb-4'}`}>
+                                       {about.section}
+                                    </p>
+                                    )
+                                })}
+                         
+                            {/* <p className="mb-4">
                                 During my journey, I had the privilege of a 2-month internship
                                 at Trebuchet Systems Kochi, where I honed my skills as a
                                 front-end developer. Additionally, I served as a dedicated Tech
@@ -114,7 +117,7 @@ const AboutPage: React.FC = () => {
                                 I have transitioned to TypeScript for its robust type safety
                                 features. Among JavaScript libraries, React is my absolute
                                 favorite.
-                            </p>
+                            </p> */}
                             <div className="flex space-x-4 text-white">
                                 <SpanBoundary
                                     whileHover={{scale: 1.1}}

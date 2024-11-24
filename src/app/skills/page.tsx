@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {skills} from "@/lib/data";
+import {skill, skills} from "@/lib/data";
 import {header, mainFont} from "@/app/font";
 import {DivBoundary, Heading1Boundary} from "@/lib/animBoundary";
 import Link from "next/link";
@@ -96,7 +96,7 @@ function page() {
                     transition={{duration: 0.3}}
                     className={`${mainFont.className} text-4xl font-bold mb-8 my-20`}
                 >
-                    Skills
+                    {skill?.title}
                 </Heading1Boundary>
                 {/* <div className="grid grid-cols-4 gap-6 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8">
           {skills.map((skill) => (

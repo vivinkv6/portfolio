@@ -51,11 +51,11 @@ const ExperiencePage = () => {
                     transition={{duration: 0.5}}
                     className={`${mainFont.className} text-4xl font-bold mb-8 my-20 text-center`}
                 >
-                    Experience
+                    {experience?.title}
                 </Heading1Boundary>
 
                 <div className="space-y-12">
-                    {experience.map((exp, index) => (
+                    {experience?.experiences?.map((exp, index) => (
                         <DivBoundary
                             key={exp.id}
                             initial={{opacity: 0, y: 20}}

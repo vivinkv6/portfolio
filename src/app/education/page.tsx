@@ -48,10 +48,10 @@ const Education = () => {
                     transition={{duration: 0.5}}
                     className={`${mainFont.className} text-4xl font-bold mb-8 my-20`}
                 >
-                    Education
+                    {education?.title}
                 </Heading1Boundary>
                 <div className="flex flex-row flex-wrap gap-5">
-                    {education.map((edu) => {
+                    {education?.educations?.map((edu) => {
                         return (
                             <Link key={edu.id} href={edu.link}>
                                 <DivBoundary
