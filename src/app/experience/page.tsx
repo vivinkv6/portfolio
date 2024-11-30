@@ -9,27 +9,31 @@ import {Metadata} from "next";
 export const metadata: Metadata = {
     title: "VivinKV - Work Experience",
     robots:{
-        index:true
+        index:true,
+        follow:true
+    },
+    alternates:{
+        canonical:`${process.env.URL}/experience`
     },
     description:
         "Discover VivinKV's professional experience as a Front End Intern at Trebuchet Systems and a Technical Lead at TinkerHub GCT, showcasing skills in front-end development and tech education.",
    keywords: [
-  "Vivin KV professional experience",
-  "VivinKV career journey",
-  "front-end developer internship",
-  "Trebuchet Systems Kochi",
-  "TinkerHub GCT Tech Lead",
-  "web development experience",
-  "UI/UX design expertise",
-  "Git and version control",
-  "team collaboration in tech",
-  "technical training sessions",
-  "technology workshops by Vivin KV",
-  "student mentorship in tech",
-  "front-end development skills",
-  "software development experience",
-  "career in web technologies"
-],
+    "vivin-kv-professional-experience",
+    "vivin-kv-career-journey",
+    "frontend-developer-internship",
+    "trebuchet-systems-kochi",
+    "tinkerhub-gct-tech-lead",
+    "web-development-experience",
+    "ui-ux-design-expertise",
+    "git-version-control",
+    "team-collaboration-in-tech",
+    "technical-training-sessions",
+    "technology-workshops-by-vivin-kv",
+    "student-mentorship-in-tech",
+    "frontend-development-skills",
+    "software-development-experience",
+    "career-in-web-technologies"
+  ],
     openGraph: {
         title: "VivinKV - Work Experience",
         description:

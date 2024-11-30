@@ -57,6 +57,10 @@ export async function generateMetadata({
     title: post.title,
     robots: {
       index: true,
+      follow:true
+    },
+    alternates:{
+      canonical:`${process.env.URL}/blogs/${params.slug}`
     },
     authors: [
       {
@@ -64,7 +68,7 @@ export async function generateMetadata({
         url: post.author.url,
       },
     ],
-    keywords: [post.title.replace(" ", "-").toLowerCase(), ...keywords],
+    keywords: [post.title.replace(/[^a-zA-Z0-9\s]/g, "").replaceAll(" ", "-").toLowerCase(), ...keywords],
     description:
       post.content.replace(/<[^>]*>?/gm, "").substring(0, 150) + "...",
     openGraph: {

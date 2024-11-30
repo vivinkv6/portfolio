@@ -11,25 +11,29 @@ export const metadata: Metadata = {
   title: "VivinKV - Blogs",
   robots: {
     index: true,
+    follow:true
+  },
+  alternates:{
+    canonical:`${process.env.URL}/blogs`
   },
   description:
     "Dive into VivinKV's insightful blogs covering web development, mobile app creation, and tech tutorials. Explore tips, guides, and project highlights using React, Next.js, TypeScript, and more.",
 keywords: [
-  "Vivin KV blogs",
-  "web development blog",
-  "frontend development articles",
-  "React tutorials and tips",
-  "Next.js development blog",
-  "TypeScript guides",
-  "JavaScript tutorials",
-  "mobile app development blogs",
-  "tech insights by Vivin KV",
-  "coding tips and tricks",
-  "MERN stack tutorials",
-  "software development blog",
-  "Vivin KV coding articles",
-  "programming tips blog",
-  "latest tech trends"
+  "vivin-kv-blogs",
+  "web-development-blog",
+  "frontend-development-articles",
+  "react-tutorials-tips",
+  "nextjs-development-blog",
+  "typescript-guides",
+  "javascript-tutorials",
+  "mobile-app-development-blogs",
+  "tech-insights-by-vivin-kv",
+  "coding-tips-tricks",
+  "mern-stack-tutorials",
+  "software-development-blog",
+  "vivin-kv-coding-articles",
+  "programming-tips-blog",
+  "latest-tech-trends"
 ],
   openGraph: {
     title: "VivinKV - Blogs",

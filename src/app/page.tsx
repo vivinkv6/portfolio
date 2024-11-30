@@ -14,13 +14,10 @@ export const metadata: Metadata = {
   title: "Vivin KV Next js Developer at Spiderworks Technologies",
   robots: {
     index: true,
+    follow:true
   },
   alternates: {
-    canonical: {
-      title: "VivinKV",
-      url: `${process.env.URL}`,
-      username: "vivinkv",
-    },
+    canonical: `${process.env.URL}`
   },
   description:
     "Passionate about creating scalable web applications, skilled in both front-end and back-end technologies.",

@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   },
   ...blog.items.map((post) => ({
     url: `${process.env.URL}/blogs/${post.id}`,
-    priority: 0.4,
+    priority: 0.5,
   })),
 ]
 }
