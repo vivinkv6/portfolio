@@ -127,6 +127,7 @@ function page() {
 
                             <Link
                                 href={project.github_link}
+                                target="_blank"
                                 className={`${projectHeader.className} bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-white`}
                             >
                                 Source Code
