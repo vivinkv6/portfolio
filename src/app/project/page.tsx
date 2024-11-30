@@ -118,6 +118,7 @@ function page() {
                             {project?.public_link && (
                                 <Link
                                     href={project?.public_link}
+                                    target="_blank"
                                     className={`${projectHeader.className} bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white`}
                                 >
                                     View
