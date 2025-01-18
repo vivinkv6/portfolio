@@ -41,6 +41,10 @@ export default function WordRotate({
           key={words[index]}
           className={cn(className)}
           {...framerProps}
+          style={{
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
         >
           {words[index]}
         </motion.h1>

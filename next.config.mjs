@@ -7,6 +7,12 @@ const nextConfig = {
         },{
             hostname:'www.blogger.com',
             protocol:'https'
+        },{
+            hostname:'res.cloudinary.com',
+            protocol:'https'
+        },{
+            hostname:'images.unsplash.com',
+            protocol:'https'
         }]
     }
 };

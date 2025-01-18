@@ -53,7 +53,7 @@ const ExperiencePage = () => {
                     initial={{opacity: 0, y: -20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.5}}
-                    className={`${mainFont.className} text-4xl font-bold mb-8 my-20 text-center`}
+                    className={`${mainFont.className} text-4xl font-bold mb-8 my-24 text-center`}
                 >
                     {experience?.title}
                 </Heading1Boundary>

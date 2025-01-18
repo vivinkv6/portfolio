@@ -49,6 +49,13 @@ import Picture4 from "/public/about/pic4.jpg";
 import Picture5 from "/public/about/pic5.jpg";
 import Picture6 from "/public/about/pic6.jpg";
 
+
+//company
+import spiderworks from "/public/company/spiderworks.png";
+import tinkerhub from "/public/company/tinkerhub.png";
+import trebuchet from "/public/company/trebuchet.png";
+
+
 type Link = {
   title:string,
   links:{
@@ -105,7 +112,9 @@ type Experience = {
     date: string;
     link: string;
     responsibilities: string[];
-  }[]
+    logo: StaticImageData|string;
+  }[],
+  
  
 };
 
@@ -189,6 +198,7 @@ export const experience: Experience = {
       " Implemented version control practices using Git, facilitating efficient team collaboration and project management.",
       " Assisted in debugging and troubleshooting front-end issues, ensuring high-quality and bug-free releases.",
     ],
+    logo: trebuchet
   },
   {
     id: 2,
@@ -201,6 +211,7 @@ export const experience: Experience = {
       " Developed and delivered comprehensive training materials, ensuring clear and effective communication of complex technical concepts",
       " Facilitated hands-on sessions, enabling students to apply learned skills in real-world scenarios.",
     ],
+    logo: tinkerhub
   },
 ]}
 
@@ -334,375 +345,169 @@ export const skills: Skills[] = [
 ];
 
 export const projects: Project = {
-  title:'Projects',
-  projects:
-  [
-  {
-    id: 1,
-    banner: Project11,
-    description: "daily.dev clone - blog application using Next js",
-    github_link: "https://github.com/vivinkv6/daily-dev-clone",
-    name: "Daily Dev Clone",
-    public_link: "https://daily-dev-clone.vercel.app/",
-    skills: [
-      {
-        id: 1,
-        name: "Next JS",
-        color: "#000000",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Tailwind CSS",
-        color: "#38B2AC",
-      },
-      {
-        id: 4,
-        name: "Daily Dev API",
-        color: "#000000",
-      },
-    ],
-  },
-  {
-    id: 2,
-    banner: Project1,
-    description: "finance dashboard",
-    github_link: "https://github.com/vivinkv6/finance-dashboard",
-    name: "Finance Dashboard",
-    public_link: "https://findas.vercel.app/",
-    skills: [
-      {
-        id: 1,
-        name: "Next JS",
-        color: "#000000",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Tailwind CSS",
-        color: "#38B2AC",
-      },
-      {
-        id: 4,
-        name: "Next Auth",
-        color: "#000000",
-      },
-      {
-        id: 5,
-        name: "PostgreSQL",
-        color: "#336791",
-      },
-    ],
-  },
-  {
-    id: 3,
-    banner: Project2,
-    description: "List down all movies list",
-    github_link: "https://github.com/vivinkv6/movie-dashboard",
-    name: "Movie Dashboard",
-    public_link: "https://nextmdb.vercel.app/",
-    skills: [
-      {
-        id: 1,
-        name: "Next JS",
-        color: "#000000",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Tailwind CSS",
-        color: "#38B2AC",
-      },
-      {
-        id: 4,
-        name: "TMDB API",
-        color: "#01D277",
-      },
-    ],
-  },
-  {
-    id: 4,
-    banner: Project3,
-    description: "General quiz application using react",
-    github_link: "https://github.com/vivinkv6/quiz-app",
-    name: "Quiz Application",
-    public_link: "https://reactquizzapp.vercel.app/",
-    skills: [
-      {
-        id: 1,
-        name: "React JS",
-        color: "#1fc1ed",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Tailwind",
-        color: "#38B2AC",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        color: "#0055FF",
-      },
-    ],
-  },
-  {
-    id: 5,
-    banner: Project4,
-    description: "Event sharing platform",
-    github_link: "https://github.com/vivinkv6/tech-connect-hub",
-    name: "Tech Connect Hub",
-    skills: [
-      {
-        id: 1,
-        name: "Node JS",
-        color: "#339933",
-      },
-      {
-        id: 2,
-        name: "Express JS",
-        color: "#000000",
-      },
-      {
-        id: 3,
-        name: "Bootstrap",
-        color: "#7952B3",
-      },
-      {
-        id: 4,
-        name: "AOS",
-        color: "#000000",
-      },
-      {
-        id: 5,
-        name: "EJS",
-        color: "#A91E50",
-      },
-      {
-        id: 6,
-        name: "PostgreSQL",
-        color: "#336791",
-      },
-      {
-        id: 7,
-        name: "Sequelize",
-        color: "#52B0E7",
-      },
-    ],
-  },
-  {
-    id: 6,
-    banner: Project5,
-    description: "short note application",
-    github_link: "https://github.com/vivinkv6/mern-note-frontend",
-    name: "Note Application",
-    skills: [
-      {
-        id: 1,
-        name: "Node JS",
-        color: "#339933",
-      },
-      {
-        id: 2,
-        name: "Express JS",
-        color: "#000000",
-      },
-      {
-        id: 3,
-        name: "Tailwind",
-        color: "#38B2AC",
-      },
-      {
-        id: 4,
-        name: "React JS",
-        color: "#1fc1ed",
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 6,
-        name: "MongoDB",
-        color: "#47A248",
-      },
-    ],
-  },
-  {
-    id: 7,
-    banner: Project6,
-    description: "Pexels clone using ejs, node js, express",
-    github_link: "https://github.com/vivinkv6/pexel-clone",
-    public_link: "https://pexel.onrender.com/",
-    name: "Pexels Clone",
-    skills: [
-      {
-        id: 1,
-        name: "Node JS",
-        color: "#339933",
-      },
-      {
-        id: 2,
-        name: "Express JS",
-        color: "#000000",
-      },
-      {
-        id: 3,
-        name: "EJS",
-        color: "#A91E50",
-      },
-      {
-        id: 4,
-        name: "Bootstrap",
-        color: "#7952B3",
-      },
-      {
-        id: 5,
-        name: "Pexel API",
-        color: "#000000",
-      },
-    ],
-  },
-  {
-    id: 8,
-    banner: Project7,
-    description: "Expense tracker using react",
-    github_link: "https://github.com/vivinkv6/budget-tracker",
-    public_link: "https://expense-tracker-vivinkv6.vercel.app/",
-    name: "Budget Tracker",
-    skills: [
-      {
-        id: 1,
-        name: "React JS",
-        color: "#1fc1ed",
-      },
-      {
-        id: 2,
-        name: "JavaScript",
-        color: "#e6d33e",
-      },
-      {
-        id: 3,
-        name: "Bootstrap",
-        color: "#7952B3",
-      },
-    ],
-  },
-  {
-    id: 9,
-    banner: Project8,
-    description: "BMI Calculator using react",
-    github_link: "https://github.com/vivinkv6/BMI-Calculator",
-    public_link: "https://bmi-calculator-liart.vercel.app/",
-    name: "BMI Calculator",
-    skills: [
-      {
-        id: 1,
-        name: "React JS",
-        color: "#1fc1ed",
-      },
-      {
-        id: 2,
-        name: "JavaScript",
-        color: "#e6d33e",
-      },
-      {
-        id: 3,
-        name: "Bootstrap",
-        color: "#7952B3",
-      },
-    ],
-  },
+  title: 'Projects',
+  projects: [
+    {
+      id: 1,
+      banner: Project11,
+      description: "A blog application built with Next.js that mimics the daily.dev platform. It allows users to explore developer-related content, comment, and interact with various posts. The app integrates with the Daily Dev API for fetching real-time blog data.",
+      github_link: "https://github.com/vivinkv6/daily-dev-clone",
+      name: "Daily Dev Clone",
+      public_link: "https://daily-dev-clone.vercel.app/",
+      skills: [
+        { id: 1, name: "Next JS", color: "#000000" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Tailwind CSS", color: "#38B2AC" },
+        { id: 4, name: "Daily Dev API", color: "#000000" },
+      ],
+    },
+    {
+      id: 2,
+      banner: Project1,
+      description: "A comprehensive finance dashboard built using Next.js and PostgreSQL. It allows users to track their expenses, visualize financial data, and manage their budgets. The app also includes secure user authentication using Next Auth.",
+      github_link: "https://github.com/vivinkv6/finance-dashboard",
+      name: "Finance Dashboard",
+      public_link: "https://findas.vercel.app/",
+      skills: [
+        { id: 1, name: "Next JS", color: "#000000" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Tailwind CSS", color: "#38B2AC" },
+        { id: 4, name: "Next Auth", color: "#000000" },
+        { id: 5, name: "PostgreSQL", color: "#336791" },
+      ],
+    },
+    {
+      id: 3,
+      banner: Project2,
+      description: "A movie listing dashboard that fetches data from the TMDB API. Built with Next.js and TypeScript, it provides users with an interactive interface to search, filter, and view details of various movies. Tailwind CSS is used for styling.",
+      github_link: "https://github.com/vivinkv6/movie-dashboard",
+      name: "Movie Dashboard",
+      public_link: "https://nextmdb.vercel.app/",
+      skills: [
+        { id: 1, name: "Next JS", color: "#000000" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Tailwind CSS", color: "#38B2AC" },
+        { id: 4, name: "TMDB API", color: "#01D277" },
+      ],
+    },
+    {
+      id: 4,
+      banner: Project3,
+      description: "A general quiz app built with React and TypeScript, offering multiple-choice questions. It features animations with Framer Motion and a smooth user experience. Tailwind CSS is used for styling the interface.",
+      github_link: "https://github.com/vivinkv6/quiz-app",
+      name: "Quiz Application",
+      public_link: "https://reactquizzapp.vercel.app/",
+      skills: [
+        { id: 1, name: "React JS", color: "#1fc1ed" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Tailwind", color: "#38B2AC" },
+        { id: 4, name: "Framer Motion", color: "#0055FF" },
+      ],
+    },
+    {
+      id: 5,
+      banner: Project4,
+      description: "An event-sharing platform built with Node.js, Express, and PostgreSQL. The app allows users to share and discover tech-related events, providing a seamless experience with the help of EJS templating and Bootstrap.",
+      github_link: "https://github.com/vivinkv6/tech-connect-hub",
+      name: "Tech Connect Hub",
+      skills: [
+        { id: 1, name: "Node JS", color: "#339933" },
+        { id: 2, name: "Express JS", color: "#000000" },
+        { id: 3, name: "Bootstrap", color: "#7952B3" },
+        { id: 4, name: "AOS", color: "#000000" },
+        { id: 5, name: "EJS", color: "#A91E50" },
+        { id: 6, name: "PostgreSQL", color: "#336791" },
+        { id: 7, name: "Sequelize", color: "#52B0E7" },
+      ],
+    },
+    {
+      id: 6,
+      banner: Project5,
+      description: "A full-stack note-taking application built with React, Node.js, and MongoDB. Users can create, edit, and delete notes, with a clean and responsive interface powered by Tailwind CSS. The backend is powered by Express and MongoDB.",
+      github_link: "https://github.com/vivinkv6/mern-note-frontend",
+      name: "Note Application",
+      skills: [
+        { id: 1, name: "Node JS", color: "#339933" },
+        { id: 2, name: "Express JS", color: "#000000" },
+        { id: 3, name: "Tailwind", color: "#38B2AC" },
+        { id: 4, name: "React JS", color: "#1fc1ed" },
+        { id: 5, name: "TypeScript", color: "#3178C6" },
+        { id: 6, name: "MongoDB", color: "#47A248" },
+      ],
+    },
+    {
+      id: 7,
+      banner: Project6,
+      description: "A clone of the Pexels website built with Node.js, Express, and EJS. It allows users to search and view high-quality images from the Pexels API. The app also utilizes Bootstrap for styling and responsiveness.",
+      github_link: "https://github.com/vivinkv6/pexel-clone",
+      public_link: "https://pexel.onrender.com/",
+      name: "Pexels Clone",
+      skills: [
+        { id: 1, name: "Node JS", color: "#339933" },
+        { id: 2, name: "Express JS", color: "#000000" },
+        { id: 3, name: "EJS", color: "#A91E50" },
+        { id: 4, name: "Bootstrap", color: "#7952B3" },
+        { id: 5, name: "Pexel API", color: "#000000" },
+      ],
+    },
+    {
+      id: 8,
+      banner: Project7,
+      description: "An expense tracker app built with React and JavaScript. Users can track their spending and set budgets, with real-time updates and interactive charts. The app uses Bootstrap for the layout and styling.",
+      github_link: "https://github.com/vivinkv6/budget-tracker",
+      public_link: "https://expense-tracker-vivinkv6.vercel.app/",
+      name: "Budget Tracker",
+      skills: [
+        { id: 1, name: "React JS", color: "#1fc1ed" },
+        { id: 2, name: "JavaScript", color: "#e6d33e" },
+        { id: 3, name: "Bootstrap", color: "#7952B3" },
+      ],
+    },
+    {
+      id: 9,
+      banner: Project8,
+      description: "A simple BMI calculator built with React and JavaScript. The app calculates the user's BMI based on input values and provides a result with an explanation. Bootstrap is used for the design and layout.",
+      github_link: "https://github.com/vivinkv6/BMI-Calculator",
+      public_link: "https://bmi-calculator-liart.vercel.app/",
+      name: "BMI Calculator",
+      skills: [
+        { id: 1, name: "React JS", color: "#1fc1ed" },
+        { id: 2, name: "JavaScript", color: "#e6d33e" },
+        { id: 3, name: "Bootstrap", color: "#7952B3" },
+      ],
+    },
+    {
+      id: 10,
+      banner: Project9,
+      description: "A GitHub UI clone built with React Native. This mobile app mimics the GitHub interface, allowing users to view repositories, issues, and pull requests. It uses Expo for development and GitHub's public API for data.",
+      github_link: "https://github.com/vivinkv6/github-clone",
+      name: "GitHub Clone",
+      mobile: true,
+      skills: [
+        { id: 1, name: "React Native", color: "#1fc1ed" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Expo", color: "#000020" },
+        { id: 4, name: "Expo Router", color: "#000020" },
+        { id: 5, name: "GitHub API", color: "#181717" },
+      ],
+    },
+    {
+      id: 11,
+      banner: Project10,
+      description: "A YouTube UI clone built with React Native. The app allows users to browse and watch YouTube videos, search for content, and view video details. Expo and the YouTube API are used to create a seamless mobile experience.",
+      github_link: "https://github.com/vivinkv6/youtube-clone",
+      mobile: true,
+      name: "YouTube Clone",
+      skills: [
+        { id: 1, name: "React Native", color: "#1fc1ed" },
+        { id: 2, name: "TypeScript", color: "#3178C6" },
+        { id: 3, name: "Expo", color: "#000020" },
+        { id: 4, name: "YouTube API", color: "#FF0000" },
+      ],
+    },
+  ],
+};
 
-  {
-    id: 10,
-    banner: Project9,
-    description: "Github UI clone using react native",
-    github_link: "https://github.com/vivinkv6/github-clone",
-    name: "GitHub Clone",
-    mobile: true,
-    skills: [
-      {
-        id: 1,
-        name: "React Native",
-        color: "#1fc1ed",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Expo",
-        color: "#000020",
-      },
-      {
-        id: 4,
-        name: "Expo Router",
-        color: "#000020",
-      },
-      {
-        id: 5,
-        name: "GitHub API",
-        color: "#181717",
-      },
-    ],
-  },
-  {
-    id: 11,
-    banner: Project10,
-    description: "Youtube UI clone using react native",
-    github_link: "https://github.com/vivinkv6/youtube-clone",
-    name: "YouTube Clone",
-    mobile: true,
-    skills: [
-      {
-        id: 1,
-        name: "React Native",
-        color: "#1fc1ed",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        color: "#3178C6",
-      },
-      {
-        id: 3,
-        name: "Expo",
-        color: "#000020",
-      },
-      {
-        id: 4,
-        name: "Expo Router",
-        color: "#000020",
-      },
-      {
-        id: 5,
-        name: "YouTube API",
-        color: "#FF0000",
-      },
-    ],
-  },
-]
-}
 
 export const AboutPage: string[] = [
   "/about/pic1.jpg",
