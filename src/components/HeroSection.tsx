@@ -114,7 +114,7 @@ function HeroSection() {
   return (
     <>
       <main className=" h-screen  w-full  overflow-hidden bg-black text-white ">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> */}
         <section className="container mx-auto relative h-[90vh] mt-4 border border-white/10 w-full overflow-hidden rounded-2xl">
           <article className="grid gap-4 text-center relative z-10 pt-10 mt-20">
             <span className="inline-block xl:text-base text-sm border p-1 px-3 w-fit mx-auto rounded-full border-[#3273ff] bg-[#0f1c35]">
@@ -124,6 +124,7 @@ function HeroSection() {
               className="2xl:text-6xl xl:text-5xl text-5xl max-sm:text-4xl font-semibold 
              bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text 
              text-transparent leading-none tracking-tighter"
+             
               style={{
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -154,7 +155,7 @@ function HeroSection() {
             <span className="text-center max-w-2xl max-sm:text-sm mx-auto">
               {homeContent?.description}
             </span>
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center space-x-6 z-10">
               <SpanBoundary
                 whileHover={{ scale: 1.1 }}
                 className="text-3xl hover:text-blue-400 transition-colors"
@@ -213,7 +214,7 @@ function HeroSection() {
             </button>
           </article>
 
-          <div className="absolute max-sm:hidden bottom-0 z-[2] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
+          <div className="relative max-sm:hidden bottom-0 z-[1] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
             <Suspense fallback={"loading..."}>
               <Sparkles
                 density={1800}
