@@ -165,7 +165,10 @@ const Footer = () => {
             </div>
           </div> */}
 
-          <h1 className="text-[16vw] text-center leading-[100%] uppercase font-semibold  bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
+          <h1  style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }} className="text-[16vw] text-center leading-[100%] uppercase font-semibold  bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
             Vivin KV
           </h1>
             {/* <motion.svg

@@ -14,12 +14,9 @@ import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
 import Image from "next/image";
 import { homeContent } from "@/lib/data";
+import WordRotate from "./ui/word-rotate";
+import { Sparkles } from "./core/sparkles";
 
-const WordRotate = dynamic(() => import("./ui/word-rotate"), { ssr: false });
-const Sparkles = dynamic(
-  () => import("./core/sparkles").then((mod) => mod.Sparkles),
-  { ssr: false }
-);
 
 // function HeroSection() {
 //   const iconSize = 50; // Size of the skill icons
@@ -216,7 +213,7 @@ function HeroSection() {
             </button>
           </article>
 
-          <div className="absolute bottom-0 z-[2] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
+          <div className="absolute max-sm:hidden bottom-0 z-[2] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
             <Suspense fallback={"loading..."}>
               <Sparkles
                 density={1800}
