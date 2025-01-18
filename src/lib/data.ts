@@ -184,14 +184,14 @@ export const education: Education = {
 
 export const experience: Experience = {
   title:'Experience',
-  experiences:
-  [
+  experiences: [
     {
   id: 0,
   company: "SpiderWorks Technologies",
   date: "July 2024 - Present",
   role: "Next JS Developer",
   link: "https://www.spiderworks.in/",
+  logo:spiderworks,
   responsibilities: [
     "Integrated RESTful APIs into Next.js applications, ensuring smooth data flow and robust functionality across the platform.",
     "Collaborated with back-end developers to define API requirements and troubleshoot integration issues, ensuring seamless connectivity.",
