@@ -186,6 +186,20 @@ export const experience: Experience = {
   title:'Experience',
   experiences:
   [
+    {
+  id: 0,
+  company: "SpiderWorks Technologies",
+  date: "July 2024 - Present",
+  role: "Next JS Developer",
+  link: "https://www.spiderworks.in/",
+  responsibilities: [
+    "Integrated RESTful APIs into Next.js applications, ensuring smooth data flow and robust functionality across the platform.",
+    "Collaborated with back-end developers to define API requirements and troubleshoot integration issues, ensuring seamless connectivity.",
+    "Optimized API requests and responses to improve application performance and reduce latency.",
+    "Debugged and resolved front-end and API-related issues, ensuring a consistent and error-free user experience.",
+    "Implemented reusable components and utilities for efficient API handling and consistent integration practices.",
+  ],
+},
   {
     id: 1,
     company: "Trebuchet Systems",
