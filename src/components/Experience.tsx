@@ -16,7 +16,10 @@ function Experience() {
         </span>
         <br />
         <div className="mx-auto  w-screen max-w-2xl">
-          <div className="text-center text-4xl max-sm:text-3xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter">
+          <div style={{
+             WebkitBackgroundClip: "text",
+             WebkitTextFillColor: "transparent",
+          }} className="text-center text-4xl max-sm:text-3xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter">
             <span className="text-indigo-200">Shaping the future with</span>
 
             <br />
