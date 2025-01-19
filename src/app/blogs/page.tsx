@@ -6,6 +6,7 @@ import { header, mainFont, projectHeader } from "@/app/font";
 import { DivBoundary, Heading1Boundary } from "@/lib/animBoundary";
 import { Metadata } from "next";
 import { getFeaturedImage } from "@/lib/utils";
+import BlogCard from "@/components/BlogCard";
 
 export const metadata: Metadata = {
   title: "VivinKV - Blogs",
@@ -85,6 +86,10 @@ async function page() {
   );
 
   const blogList: BloggerResponse = await blogResponse.json();
+
+  console.log(blogList);
+  
+
   let featuredImages: {
     url: string;
     id: string;
@@ -113,51 +118,11 @@ async function page() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {blogList?.items?.map((post, index: number) => (
-          <DivBoundary
-            key={post.id}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.2 * index }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-gray-800 rounded-lg p-4 flex flex-col justify-between gap-5"
-          >
-            <div className="flex flex-col justify-start">
-              <div className="bg-gray-700 w-full max-h-80 mb-4 rounded overflow-hidden">
-                <Link href={`/blogs/${post.id}`}>
-                  <Image
-                    src={
-                      featuredImages.find((image) => image.id === post.id)
-                        ?.url || ""
-                    }
-                    alt={post.title}
-                    width={1000}
-                    height={1000}
-                    className="rounded w-full h-auto object-cover mx-auto"
-                    layout="responsive"
-                    sizes="(max-width: 640px) 100vw,
-                           (max-width: 768px) 50vw,
-                           (max-width: 1024px) 33vw,
-                           25vw"
-                    unoptimized
-                  />
-                </Link>
-              </div>
-
-              <h2
-                className={`text-xl font-[400] text-white ${projectHeader.className}`}
-              >
-                {post.title}
-              </h2>
-              <div className="flex flex-wrap gap-2 mt-3">
-                {post.labels
-                  .slice(0, post.labels.length > 5 ? 5 : post.labels.length)
-                  .map((label,index) => (
-                    <p key={index} className="text-gray-400 text-sm rounded border border-gray-600 p-1">
-                      {label}
-                    </p>
-                  ))}
-              </div>
-            </div>
-          </DivBoundary>
+         
+            <BlogCard key={index} id={post.id} img={featuredImages.find((image) => image.id === post.id)
+                        ?.url || ""} labels={post.labels} title={post.title} published={post.published}/>
+           
+         
         ))}
       </div>
     </main>
@@ -165,3 +130,4 @@ async function page() {
 }
 
 export default page;
+

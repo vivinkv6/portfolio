@@ -124,7 +124,7 @@ async function Page({ params }: { params: { slug: string } }) {
           return (
             <p
               key={index}
-              className="text-gray-400 text-sm rounded border border-gray-600 p-1"
+              className="whitespace-nowrap rounded-full bg-gray-800 px-2.5 py-0.5 text-sm text-gray-50"
             >
               {label}
             </p>

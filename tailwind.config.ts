@@ -77,7 +77,8 @@ const config: Config = {
   			}
   		},
   		animation: {
-  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+			  border: 'background ease infinite',
   		},
   		keyframes: {
   			orbit: {
@@ -87,7 +88,11 @@ const config: Config = {
   				'100%': {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
   				}
-  			}
+  			},
+			  background: {
+				'0%, 100%': { backgroundPosition: '0% 50%' },
+				'50%': { backgroundPosition: '100% 50%' },
+			  },
   		}
   	}
   },
