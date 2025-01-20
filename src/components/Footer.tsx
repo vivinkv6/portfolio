@@ -90,7 +90,7 @@ const Footer = () => {
       </Toast.Provider> */}
 
       <div
-        className='relative h-full sm:pt-14 pt-8 bg-slate-900 mb-5 text-white'
+        className='relative h-full sm:pt-14 pt-8 bg-slate-900  text-white'
         ref={container}
       >
         <div className='sm:container  px-4 mx-auto'>
