@@ -197,7 +197,7 @@ const Footer = () => {
             </motion.svg> */}
         
           <div className='flex md:flex-row flex-col-reverse items-center gap-3 justify-center py-2'>
-          <span className="font-mediumr">
+          <span className="font-medium mb-3">
   &copy; 2025 Vivin KV. All Rights Reserved.
 </span>
 
