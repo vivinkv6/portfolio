@@ -49,18 +49,17 @@ export async function generateMetadata({
   const post: BlogPost = await postDetail.json();
   const image = getFeaturedImage(post.content);
 
-  const keywords = post.labels?.map((label) =>
-    convertHashtagToKebabCase(label)
-  );
+  const keywords =
+    post?.labels?.map((label) => convertHashtagToKebabCase(label)) || [];
 
   return {
     title: post.title,
     robots: {
       index: true,
-      follow:true
+      follow: true,
     },
-    alternates:{
-      canonical:`${process.env.URL}/blogs/${params.slug}`
+    alternates: {
+      canonical: `${process.env.URL}/blogs/${params.slug}`,
     },
     authors: [
       {
@@ -68,7 +67,13 @@ export async function generateMetadata({
         url: post.author.url,
       },
     ],
-    keywords: [post.title.replace(/[^a-zA-Z0-9\s]/g, "").replaceAll(" ", "-").toLowerCase(), ...keywords],
+    keywords: [
+      post.title
+        .replace(/[^a-zA-Z0-9\s]/g, "")
+        .replaceAll(" ", "-")
+        .toLowerCase(),
+      ...keywords,
+    ],
     description:
       post.content.replace(/<[^>]*>?/gm, "").substring(0, 150) + "...",
     openGraph: {
@@ -114,23 +119,28 @@ async function Page({ params }: { params: { slug: string } }) {
           day: "numeric",
         }).format(new Date(post.published))}
       </h6>
+
       <h1
         className={`text-4xl max-lg:text-3xl max-sm:text-2xl xl:w-[60%] font-[500] ${projectHeader.className}`}
       >
         {post.title}
       </h1>
-      <div className="flex flex-wrap gap-2 mt-5 xl:w-[80%]">
-        {post.labels.map((label, index) => {
-          return (
-            <p
-              key={index}
-              className="whitespace-nowrap rounded-full bg-gray-800 px-2.5 py-0.5 text-sm text-gray-50"
-            >
-              {label}
-            </p>
-          );
-        })}
-      </div>
+
+      {post?.labels?.length != 0 && (
+        <div className="flex flex-wrap gap-2 mt-5 xl:w-[80%]">
+          {post?.labels?.map((label, index) => {
+            return (
+              <p
+                key={index}
+                className="whitespace-nowrap rounded-full bg-gray-800 px-2.5 py-0.5 text-sm text-gray-50"
+              >
+                {label}
+              </p>
+            );
+          })}
+        </div>
+      )}
+
       {/* <div className="flex items-center gap-x-2 mt-5">
         <Image
           src={`https:${post.author.image.url}`}
@@ -144,16 +154,28 @@ async function Page({ params }: { params: { slug: string } }) {
       <div className="w-full flex justify-center">
         <div
           className="
-            max-w-3xl
-          prose-hr:border-gray-600
-          prose-headings:text-gray-200
-            prose-headings:font-[800]
-            prose-headings:w-[90%]
-            prose-headings:my-5
-          prose-p:text-gray-400 prose-p:text-md
-          prose-p:my-5 
+          prose
+          max-w-3xl
           text-white
-        "
+          prose-headings:text-white
+          prose-a:text-white
+           prose-hr:border-gray-600"
+          //   className="
+          //     prose
+          //     max-w-3xl
+
+          //   prose-headings:text-gray-200
+
+          //     prose-headings:text-3xl
+          //     max-sm:prose-headings:text-lg
+          //     prose-headings:w-[90%]
+          //     prose-headings:my-5
+          //   prose-p:text-gray-400 prose-p:text-md
+          //   prose-p:my-5
+          //   text-white
+          //   prose-a:underline
+          //   prose-a:text-gray-200
+          // "
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></div>
       </div>
