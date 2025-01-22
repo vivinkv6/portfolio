@@ -13,6 +13,9 @@ const nextConfig = {
         },{
             hostname:'images.unsplash.com',
             protocol:'https'
+        },{
+             hostname:'blogger.googleusercontent.com',
+            protocol:'https'
         }]
     }
 };
