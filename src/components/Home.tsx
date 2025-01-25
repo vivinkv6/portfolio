@@ -3,14 +3,16 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import HomeTopSection from "./HomeTop";
 import Image from "next/image";
 import Person from "../../public/home/person.png";
-import Marquee from "./Marquee";
 import { projects } from "@/lib/data";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import DesktopProject from "./Projects/Desktop";
 import MobileProject from "./Projects/Mobile";
 import Footer from "./Footer";
+import dynamic from "next/dynamic";
+
+const Marquee = dynamic(() => import("./Marquee"), { ssr: false });
 
 function useDeviceType() {
   const [isMobile, setIsMobile] = useState(false);
@@ -50,10 +52,12 @@ export default function Home(): JSX.Element {
               </div>
             </div>
           </section>
+          <Suspense fallback="Loading...">
           <section className="text-white h-screen w-full bg-slate-950 grid place-content-center sticky top-0">
             {/* <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> */}
             <Marquee />
           </section>
+          </Suspense>
         </div>
 
         <Skills />

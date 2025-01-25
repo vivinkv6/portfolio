@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import Earth from "@/components/core/globe";
 import { Sparkles } from "@/components/core/sparkles";
+import dynamic from 'next/dynamic';
 
 //skills
 import nextjs from "/public/skills/nextjs.png";
@@ -24,9 +25,13 @@ import canva from "/public/skills/canva.png";
 import vite from "/public/skills/vite.png";
 import trello from "/public/skills/trello.png";
 import strapi from "/public/skills/strapi.png";
-import OrbitingCircles from "./ui/orbiting-circles";
+
 import Image from "next/image";
 import { skills } from "@/lib/data";
+
+const OrbitingCircles = dynamic(() => import('./ui/orbiting-circles'), {
+  ssr: false
+});
 
 function Skills() {
   return (
@@ -51,7 +56,7 @@ function Skills() {
           </p>
 
           <Suspense fallback={<OrbitingCircles />}>
-          <Earth />
+            <Earth />
           </Suspense>
          
         </article>
