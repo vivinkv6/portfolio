@@ -48,7 +48,7 @@ function Experience() {
           alt="Logo of Spiderworks Technologies"
           aria-label="Spiderworks Technologies"
         />
-        <figcaption>Spiderworks Technologies</figcaption>
+        {/* <figcaption>Spiderworks Technologies</figcaption> */}
       </figure>
       <figure role="listitem">
         <Image
@@ -59,7 +59,7 @@ function Experience() {
           alt="Logo of Tinkerhub GCT"
           aria-label="Tinkerhub GCT"
         />
-        <figcaption>Tinkerhub GCT</figcaption>
+        {/* <figcaption>Tinkerhub GCT</figcaption> */}
       </figure>
       <figure role="listitem">
         <Image
@@ -70,7 +70,7 @@ function Experience() {
           alt="Logo of Trebuchet Systems"
           aria-label="Trebuchet Systems"
         />
-        <figcaption>Trebuchet Systems</figcaption>
+        {/* <figcaption>Trebuchet Systems</figcaption> */}
       </figure>
     </div>
   </div>
