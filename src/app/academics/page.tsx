@@ -5,6 +5,13 @@ import { Metadata } from "next";
 // Add these meta details at the top of the file
 export const metadata = {
   title: "VivinKV - Academic Journey",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${process.env.URL}/academics`,
+  },
   description: "A chronicle of academic experiences at Sri C Achuthamenon Government College, including technical leadership at TinkerHub GCT, project developments, celebrations, and achievements from 2021 onwards.",
   keywords: [
     "vivin kv academics",
