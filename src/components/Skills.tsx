@@ -36,7 +36,7 @@ const OrbitingCircles = dynamic(() => import('./ui/orbiting-circles'), {
 function Skills() {
   return (
     <>
-     <div className="h-screen overflow-hidden bg-black text-white relative">
+    <div className="h-screen overflow-hidden bg-black text-white relative">
   <article className="grid gap-4 text-center relative z-10 pt-10">
     <span
       className="inline-block text-sm border p-1 px-3 w-fit mx-auto rounded-full border-[#3273ff] bg-[#0f1c35]"
@@ -51,13 +51,15 @@ function Skills() {
         WebkitTextFillColor: "transparent",
       }}
       className="text-4xl max-sm:text-3xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter"
+      aria-labelledby="skills-heading"
     >
       Skills That Empower <br /> Your Vision
     </h1>
 
     <p
+      id="skills-description"
       className="mt-4 text-lg max-sm:text-sm text-gray-300 text-center px-[20%] max-sm:px-5"
-      aria-label="Description of skills and technologies"
+      aria-describedby="skills-description"
     >
       I specialize in creating responsive interfaces with React, Next.js, and Tailwind CSS, and building scalable backends using Node.js, Express, and PostgreSQL. Combining expertise with creativity, I deliver impactful digital solutions.
     </p>
@@ -79,9 +81,11 @@ function Skills() {
       opacitySpeed={2}
       color="#32A7FF"
       className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+      aria-hidden="true"
     />
   </div>
 </div>
+
 
     </>
   );

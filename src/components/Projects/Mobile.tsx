@@ -10,46 +10,45 @@ export default function MobileProject(): JSX.Element {
   
     return (
       <ReactLenis root>
-      <main className="bg-black" ref={container}>
-        <section className="text-white h-[70vh] w-full bg-slate-950 grid place-content-center" aria-labelledby="projects-header">
-          <h1 id="projects-header" className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
-            Personal Projects & <br /> Experiments
-          </h1>
-        </section>
+        <main className="bg-black" ref={container}>
+          <section className="text-white h-[70vh] w-full bg-slate-950 grid place-content-center" aria-labelledby="projects-header">
+            <h1 id="projects-header" className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+              Personal Projects & <br /> Experiments
+            </h1>
+          </section>
     
-        <section className="text-white w-full bg-slate-950" aria-labelledby="projects-list">
-          <h2 id="projects-list" className="sr-only">Project List</h2>
-          {projects?.projects?.slice(0, 4)?.map((project, i) => {
-            const targetScale = 1 - (projects.projects.length - i) * 0.05;
-            if (!project.public_link || !project.github_link || !project.name || !project.description) return null;
+          <section className="text-white w-full bg-slate-950" aria-labelledby="projects-list">
+            <h2 id="projects-list" className="sr-only">Project List</h2>
+            {projects?.projects?.slice(0, 4)?.map((project, i) => {
+              const targetScale = 1 - (projects.projects.length - i) * 0.05;
+              if (!project.public_link || !project.github_link || !project.name || !project.description) return null;
     
-            return (
-              <Card
-                key={`p_${i}`}
-                url={project.banner}
-                src={project.github_link}
-                title={project.name}
-                description={project.description}
-              />
-            );
-          })}
-        </section>
-      </main>
-    </ReactLenis>
+              return (
+                <Card
+                  key={`p_${i}`}
+                  url={project.banner}
+                  src={project.github_link}
+                  title={project.name}
+                  description={project.description}
+                />
+              );
+            })}
+          </section>
+        </main>
+      </ReactLenis>
     );
-  }
-
-type CardProps={
-    title: string,
-    description: string,
-    src: string,
-    url: string | StaticImageData,
 }
 
-function Card({description,src,title,url}:CardProps) {
+type CardProps = {
+  title: string,
+  description: string,
+  src: string,
+  url: string | StaticImageData,
+}
+
+function Card({ description, src, title, url }: CardProps) {
   return (
-    <>
-      <div
+    <div
       className="w-[90%] mb-10 h-[480px] group mx-auto bg-slate-900 p-2 border-0 overflow-hidden rounded-md text-white"
       role="article"
       aria-labelledby={`card-${title}`}
@@ -63,7 +62,7 @@ function Card({description,src,title,url}:CardProps) {
         ></div>
         <Image
           src={url}
-          alt={`Image for project ${title}`}
+          alt={`Banner image for project ${title}`}
           width={600}
           height={600}
           className="absolute -bottom-1 group-hover:-bottom-5 right-0 h-64 w-[80%] group-hover:border-4 border-4 group-hover:border-[#76aaf82d] rounded-lg object-cover transition-all duration-300"
@@ -88,8 +87,5 @@ function Card({description,src,title,url}:CardProps) {
         </a>
       </article>
     </div>
-    </>
   );
 }
-
-
