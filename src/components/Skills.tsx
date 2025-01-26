@@ -36,43 +36,53 @@ const OrbitingCircles = dynamic(() => import('./ui/orbiting-circles'), {
 function Skills() {
   return (
     <>
-      <div className="h-screen overflow-hidden bg-black  text-white relative">
-        <article className="grid gap-4 text-center relative z-10 pt-10">
-          <span className="inline-block text-sm  border p-1 px-3 w-fit mx-auto rounded-full border-[#3273ff] bg-[#0f1c35]">
-            Technologies 🧑‍💻
-          </span>
-          <h1 style={{
-             WebkitBackgroundClip: "text",
-             WebkitTextFillColor: "transparent",
-          }} className="text-4xl max-sm:text-3xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter">
-            Skills That Empower <br /> Your Vision
-            
-          </h1>
-          <p className="mt-4 text-lg max-sm:text-sm text-gray-300 text-center px-[20%] max-sm:px-5">
-            I specialize in creating responsive interfaces with React, Next.js,
-            and Tailwind CSS, and building scalable backends using Node.js,
-            Express, and PostgreSQL. Combining expertise with creativity, I
-            deliver impactful digital solutions.
-          </p>
+     <div className="h-screen overflow-hidden bg-black text-white relative">
+  <article className="grid gap-4 text-center relative z-10 pt-10">
+    <span
+      className="inline-block text-sm border p-1 px-3 w-fit mx-auto rounded-full border-[#3273ff] bg-[#0f1c35]"
+      aria-label="Technologies section"
+    >
+      Technologies 🧑‍💻
+    </span>
 
-          <Suspense fallback={<OrbitingCircles />}>
-            <Earth />
-          </Suspense>
-         
-        </article>
-        <div className="relative max-sm:hidden -mt-32 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[10%]  ">
-          <Sparkles
-            density={800}
-            speed={1.2}
-            size={1.2}
-            direction="top"
-            opacitySpeed={2}
-            color="#32A7FF"
-           className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
-          />
-        </div>
-       
-      </div>
+    <h1
+      style={{
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }}
+      className="text-4xl max-sm:text-3xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter"
+    >
+      Skills That Empower <br /> Your Vision
+    </h1>
+
+    <p
+      className="mt-4 text-lg max-sm:text-sm text-gray-300 text-center px-[20%] max-sm:px-5"
+      aria-label="Description of skills and technologies"
+    >
+      I specialize in creating responsive interfaces with React, Next.js, and Tailwind CSS, and building scalable backends using Node.js, Express, and PostgreSQL. Combining expertise with creativity, I deliver impactful digital solutions.
+    </p>
+
+    <Suspense fallback={<OrbitingCircles aria-label="Loading 3D Earth model..." />}>
+      <Earth aria-label="Interactive 3D Earth model" />
+    </Suspense>
+  </article>
+
+  <div
+    className="relative max-sm:hidden -mt-32 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[10%]"
+    aria-hidden="true"
+  >
+    <Sparkles
+      density={800}
+      speed={1.2}
+      size={1.2}
+      direction="top"
+      opacitySpeed={2}
+      color="#32A7FF"
+      className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+    />
+  </div>
+</div>
+
     </>
   );
 }

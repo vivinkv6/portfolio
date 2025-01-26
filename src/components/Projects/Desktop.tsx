@@ -57,37 +57,35 @@ export default function DesktopProject(): JSX.Element {
 
   return (
     <ReactLenis root>
-      <main className='bg-black' ref={container}>
-        <section className='text-white h-[70vh] w-full bg-slate-950 grid place-content-center'>
-          {/* <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div> */}
-
-          <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-            Personal Projects & <br /> Experiments
-          </h1>
-        </section>
-
-        <section className='text-white w-full bg-slate-950'>
-          {projects?.projects?.slice(0, 4)?.map((project, i) => {
-            const targetScale = 1 - (projects.projects.length - i) * 0.05;
-            if (!project.public_link || !project.github_link || !project.name || !project.description) return null;
-
-            return (
-              <Card
-                key={`p_${i}`}
-                i={i}
-                url={project.banner}
-                src={project.github_link}
-                title={project.name}
-                description={project.description}
-                progress={scrollYProgress}
-                range={[i * 0.25, 1]}
-                targetScale={targetScale}
-              />
-            );
-          })}
-        </section>
-      </main>
-    </ReactLenis>
+    <main className="bg-black" ref={container}>
+      <section className="text-white h-[70vh] w-full bg-slate-950 grid place-content-center">
+        <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+          Personal Projects & <br /> Experiments
+        </h1>
+      </section>
+  
+      <section className="text-white w-full bg-slate-950">
+        {projects?.projects?.slice(0, 4)?.map((project, i) => {
+          const targetScale = 1 - (projects.projects.length - i) * 0.05;
+          if (!project.public_link || !project.github_link || !project.name || !project.description) return null;
+  
+          return (
+            <Card
+              key={`p_${i}`}
+              i={i}
+              url={project.banner}
+              src={project.github_link}
+              title={project.name}
+              description={project.description}
+              progress={scrollYProgress}
+              range={[i * 0.25, 1]}
+              targetScale={targetScale}
+            />
+          );
+        })}
+      </section>
+    </main>
+  </ReactLenis>
   );
 }
 
@@ -127,6 +125,9 @@ export const Card: React.FC<CardProps> = ({
     <div
     ref={container}
     className="h-auto sm:h-screen flex items-center justify-center sticky top-0"
+    role="article"
+    aria-labelledby={`project-title-${i}`}
+    aria-describedby={`project-description-${i}`}
   >
     <motion.div
       style={{
@@ -134,39 +135,43 @@ export const Card: React.FC<CardProps> = ({
         scale,
         top: `calc(-5vh + ${i * 25}px)`,
       }}
-      className={`flex flex-col relative h-auto sm:h-[450px] w-[90%] sm:w-[70%] rounded-md p-6 sm:p-10 origin-top bg-gray-900`}
+      className="flex flex-col relative h-auto sm:h-[450px] w-[90%] sm:w-[70%] rounded-md p-6 sm:p-10 origin-top bg-gray-900"
     >
-      <h2 className="text-xl sm:text-2xl font-semibold">{title}</h2>
-      <div className={`flex flex-col sm:flex-row h-full mt-5 gap-6 sm:gap-10`}>
+      <h2 id={`project-title-${i}`} className="text-xl sm:text-2xl font-semibold">
+        {title}
+      </h2>
+      <div className="flex flex-col sm:flex-row h-full mt-5 gap-6 sm:gap-10">
         {/* Description Section */}
-        <div className={`w-full sm:w-[40%]`}>
-          <p className="text-sm sm:text-base">{description}</p>
+        <div className="w-full sm:w-[40%]">
+          <p id={`project-description-${i}`} className="text-sm sm:text-base">
+            {description}
+          </p>
           <span className="flex items-center gap-2 pt-2">
             <a
               href={src}
               target="_blank"
               rel="noopener noreferrer"
               className="underline cursor-pointer text-blue-400"
+              aria-label={`View source code for ${title}`}
             >
               Source Code
             </a>
           </span>
         </div>
-  
+
         {/* Image Section */}
         <div
-          className={`relative w-full sm:w-[60%] h-[250px] sm:h-full rounded-lg overflow-hidden`}
+          className="relative w-full sm:w-[60%] h-[250px] sm:h-full rounded-lg overflow-hidden"
+          role="figure"
+          aria-labelledby={`project-title-${i}`}
         >
-          <motion.div
-            className={`w-full h-full`}
-            style={{ scale: imageScale }}
-          >
+          <motion.div className="w-full h-full" style={{ scale: imageScale }}>
             <Image
               fill
               src={url}
-              alt="Project image"
+              alt={`Image for project ${title}`}
               className="object-cover"
-              // unoptimized
+              unoptimized
             />
           </motion.div>
         </div>

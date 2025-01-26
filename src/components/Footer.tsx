@@ -64,147 +64,25 @@ const Footer = () => {
 
   return (
     <>
-      {/* <Toast.Provider>
-        <Toast.Provider swipeDirection="right">
-          <Toast.Root
-            className="ToastRoot"
-            open={openPopup}
-            onOpenChange={setOpenPopUp}
-          >
-            <Toast.Title className="ToastTitle">
-              We Received Your Message, Thanks
-            </Toast.Title>
-            <Toast.Action
-              className="ToastAction"
-              asChild
-              altText="Goto schedule to undo"
-            >
-              <button className="bg-white text-black px-3 py-1 rounded-lg">
-                ok
-              </button>
-            </Toast.Action>
-          </Toast.Root>
-          <Toast.Viewport className="ToastViewport" />
-        </Toast.Provider>
-        <Toast.Viewport />
-      </Toast.Provider> */}
+ <div className="relative h-full sm:pt-14 pt-8 bg-slate-900 text-white" ref={container}>
+  <main className="sm:container px-4 mx-auto" role="main">
+    <h1
+      style={{
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }}
+      className="text-[16vw] text-center leading-[100%] uppercase font-semibold bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear"
+    >
+      Vivin KV
+    </h1>
+    <div className="flex md:flex-row flex-col-reverse items-center gap-3 justify-center py-2">
+      <span className="font-medium mb-3" aria-label="Copyright 2025 Vivin KV. All Rights Reserved.">
+        &copy; 2025 Vivin KV. All Rights Reserved.
+      </span>
+    </div>
+  </main>
+</div>
 
-      <div
-        className='relative h-full sm:pt-14 pt-8 bg-slate-900  text-white'
-        ref={container}
-      >
-        <div className='sm:container  px-4 mx-auto'>
-          {/* <div className='md:flex justify-between w-full'>
-          
-            <div className='flex justify-between gap-10'>
-              <ul>
-                <li className='text-2xl pb-2 text-black font-semibold'>
-                  SITEMAP
-                </li>
-                <li className='text-xl font-medium'>
-                  <Link href='/'>Home</Link>
-                </li>
-                <li className='text-xl font-medium'>
-                  <Link href='/about'>About us</Link>
-                </li>
-                <li className='text-xl font-medium'>
-                  <Link href='/services'>Our Services</Link>
-                </li>
-
-                <li className='text-xl font-medium'>
-                  <Link href='/projects'>Projects</Link>
-                </li>
-                <li className='text-xl font-medium'>
-                  <Link href='/blogs'>Blogs</Link>
-                </li>
-                <li className='text-xl font-medium'>
-                  <Link href='/contact-us'>Contact</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className='text-2xl pb-2 text-black font-semibold'>
-                  SOCIAL
-                </li>
-                <li className='text-xl font-medium'>
-                  <a
-                    href='https://www.linkedin.com/company/next-codez/'
-                    target='_blank'
-                    className='underline'
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-                <li className='text-xl font-medium'>
-                  <a
-                    href='https://twitter.com/NextCodez'
-                    target='_blank'
-                    className='underline'
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li className='text-xl font-medium'>
-                  <a
-                    href='https://www.instagram.com/nextcodez/'
-                    target='_blank'
-                    className='underline'
-                  >
-                    Instagram
-                  </a>
-                </li>
-                <li className='text-xl font-medium'>
-                  <a
-                    href='https://www.facebook.com/nextcodezz'
-                    target='_blank'
-                    className='underline'
-                  >
-                    Facebook
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div> */}
-
-          <h1  style={{
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }} className="text-[16vw] text-center leading-[100%] uppercase font-semibold  bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
-            Vivin KV
-          </h1>
-            {/* <motion.svg
-              width='776'
-              ref={ref}
-              height='137'
-              viewBox='0 0 776 137'
-              fill='none'
-              className='sm:h-fit h-20 md:px-8 px-2 footer-logo w-full'
-              xmlns='http://www.w3.org/2000/svg'
-              initial='hidden'
-              animate={isInView ? 'visible' : 'hidden'}
-            >
-              {pathArr.map((path, index) => {
-                return (
-                  <>
-                    <motion.path
-                      custom={index}
-                      variants={variants}
-                      d={path}
-                      fill='#3E7AEE'
-                    />
-                  </>
-                );
-              })}
-            </motion.svg> */}
-        
-          <div className='flex md:flex-row flex-col-reverse items-center gap-3 justify-center py-2'>
-          <span className="font-medium mb-3">
-  &copy; 2025 Vivin KV. All Rights Reserved.
-</span>
-
-          
-          </div>
-        </div>
-      </div>
     </>
   );
 };
