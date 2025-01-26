@@ -47,7 +47,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/academics/a30.jpg", // Update with your actual image path
+        url: "/academics/a25.jpg", // Update with your actual image path
         width: 1200,
         height: 630,
         alt: "Academic Journey Overview"
@@ -58,7 +58,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Academic Journey and Achievements",
     description: "College life, technical leadership, and achievements at Sri C Achuthamenon Government College",
-    images: ["/academics/a30.jpg"],  // Update with your actual image path
+    images: ["/academics/a25.jpg"],  // Update with your actual image path
 
   }
 };
