@@ -16,6 +16,9 @@ const nextConfig = {
         },{
              hostname:'blogger.googleusercontent.com',
             protocol:'https'
+        },{
+            hostname:'assets.aceternity.com',
+            protocol:'https'
         }]
     }
 };

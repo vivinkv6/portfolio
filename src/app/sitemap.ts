@@ -33,6 +33,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   },
   {
+    url: `${process.env.URL}/academics`,
+    priority: 0.6,
+  },
+  {
     url: `${process.env.URL}/blogs`,
     priority: 0.6,
   },

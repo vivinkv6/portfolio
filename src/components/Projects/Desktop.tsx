@@ -166,7 +166,7 @@ export const Card: React.FC<CardProps> = ({
               src={url}
               alt="Project image"
               className="object-cover"
-              unoptimized
+              // unoptimized
             />
           </motion.div>
         </div>

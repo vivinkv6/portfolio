@@ -39,6 +39,20 @@ export const metadata: Metadata = {
         siteName: "VIVIN KV",
         locale: "en_US",
         url: `${process.env.URL}/education`,
+        images: [{
+            url: '/academics/a30.jpg',
+            width: 800,
+            height: 600,
+            alt: 'VivinKV - Educational Background'
+        }],
+    },
+    
+    twitter: {
+        card: "summary_large_image",
+        title: "VivinKV - Educational Background",
+        description:`VivinKV graduated with a BSc in Computer Science from Sri C Achutha Menon Govt College Thrissur and completed his higher secondary education in Commerce at CNN Higher Secondary School. These academic experiences are pivotal to his growth as a skilled developer.`,
+      
+        images: ['/academics/a30.jpg'],
     },
 };
 
@@ -69,7 +83,7 @@ const Education = () => {
                                         <Image
                                             src={edu.logo}
                                             alt={edu.name}
-                                            unoptimized
+                                            // unoptimized
                                             className="rounded-full"
                                         />
                                     </div>

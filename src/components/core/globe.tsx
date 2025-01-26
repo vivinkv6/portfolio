@@ -109,7 +109,7 @@ const Earth: React.FC<EarthProps> = ({
                 height={250}
                 width={250}
                 alt={skill.name}
-                unoptimized
+                // unoptimized
               />
             </OrbitingCircles>
           );

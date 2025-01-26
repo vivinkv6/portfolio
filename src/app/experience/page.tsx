@@ -42,6 +42,19 @@ export const metadata: Metadata = {
         siteName: "VIVIN KV",
         locale: "en_US",
         url: `${process.env.URL}/experience`,
+        images:[{
+            url:'/about/pic6.jpg',
+            width:800,
+            height:600,
+            alt:'VivinKV - Work Experience'
+        }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "VivinKV - Work Experience",
+        description:
+            "A detailed overview of VivinKV's work experience, highlighting roles at Trebuchet Systems and TinkerHub GCT, focusing on front-end development and technical leadership.",
+        images: ['/about/pic6.jpg'],
     },
 };
 

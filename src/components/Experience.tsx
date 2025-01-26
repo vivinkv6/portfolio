@@ -39,7 +39,7 @@ function Experience() {
               width={300}
               height={300}
               alt={"spiderworks technologies"}
-              unoptimized
+              // unoptimized
             />
             <Image
               title="Tinkerhub GCT"
@@ -47,7 +47,7 @@ function Experience() {
               width={300}
               height={300}
               alt={"tinkerhub gct"}
-              unoptimized
+              // unoptimized
             />
             <Image
               title="Trebuchet Systems"
@@ -55,7 +55,7 @@ function Experience() {
               width={70}
               height={70}
               alt={"trebuchet systems"}
-              unoptimized
+              // unoptimized
             />
           </div>
         </div>

@@ -50,6 +50,19 @@ export const metadata: Metadata = {
         siteName: "VIVIN KV",
         locale: "en_US",
         url: `${process.env.URL}/projects`,
+        images:[{
+            url:'/project/project4.png',
+            width:800,
+            height:600,
+            alt:'VivinKV - Projects'
+        }]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "VivinKV - Projects",
+        description:
+            "A showcase of VivinKV's development portfolio, including web and mobile applications built with modern technologies like React, TypeScript, Next.js, and more.",
+        images: ['/project/project4.png'],
     },
 };
 
@@ -87,7 +100,7 @@ function page() {
                                     width={500}
                                     height={500}
                                     className="rounded min-h-28"
-                                    unoptimized
+                                    // unoptimized
                                 />
                             </div>
 

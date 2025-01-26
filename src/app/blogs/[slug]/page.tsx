@@ -84,9 +84,25 @@ export async function generateMetadata({
       authors: post.author.displayName,
       images: [
         {
-          url: `https:${image}`,
+          url: `${image}`,
           width: 800,
           height: 600,
+          alt:post.title
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      
+      description:
+        post.content.replace(/<[^>]*>?/gm, "").substring(0, 150) + "...",
+      images: [
+        {
+          url: `${image}`,
+          width: 800,
+          height: 600,
+          alt:post.title
         },
       ],
     },

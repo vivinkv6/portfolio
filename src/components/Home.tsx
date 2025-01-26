@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
                 </h1>
               </div>
               <div className="md:w-1/2 z-10">
-                <Image src={Person} unoptimized height={400} width={400} alt="person" />
+                <Image src={Person}  height={400} width={400} alt="person" />
               </div>
             </div>
           </section>

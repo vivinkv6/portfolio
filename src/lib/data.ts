@@ -137,6 +137,11 @@ export const navLinks: Link = {
     link: "/education",
   },
   {
+    id: 8,
+    name: "Academics",
+    link: "/academics",
+  },
+  {
     id: 4,
     name: "Experience",
     link: "/experience",

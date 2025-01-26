@@ -58,6 +58,20 @@ export const metadata: Metadata = {
     siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/about`,
+    images:[{
+      url:'/about/pic2.jpg',
+      width:800,
+      height:600,
+      alt:'About VivinKV - Web Developer & Tech Enthusiast'
+    }],
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About VivinKV - Web Developer & Tech Enthusiast',
+    description: 'Learn more about VivinKV, a skilled MERN stack and React Native developer. Recently graduated from Sri C Achuthamenon Govt College, with experience as a front-end developer at Trebuchet Systems and Tech Lead at Tinkerhub GCT.',
+   
+    images: ['/about/pic2.jpg'],
   },
 };
 

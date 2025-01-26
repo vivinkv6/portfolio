@@ -64,7 +64,7 @@ function Card({description,src,title,url}:CardProps) {
             alt='shoes'
             width={600}
             height={600}
-            unoptimized
+            // unoptimized
             className='absolute -bottom-1 group-hover:-bottom-5 right-0 h-64 w-[80%] group-hover:border-4 border-4 group-hover:border-[#76aaf82d] rounded-lg object-cover transition-all duration-300'
           />
         </figure>
