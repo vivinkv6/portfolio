@@ -36,7 +36,7 @@ type BlogPost = {
 export const revalidate = 10;
 
 // Disable dynamic route generation
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
