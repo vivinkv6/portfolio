@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: `${process.env.URL}/projects`,
         images:[{
-            url:'/project/project4.png',
+            url: `${process.env.URL}/project/project4.png`,
             width:800,
             height:600,
             alt:'VivinKV - Projects'
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         title: "VivinKV - Projects",
         description:
             "A showcase of VivinKV's development portfolio, including web and mobile applications built with modern technologies like React, TypeScript, Next.js, and more.",
-        images: ['/project/project4.png'],
+        images: [`${process.env.URL}/project/project4.png`],
     },
 };
 

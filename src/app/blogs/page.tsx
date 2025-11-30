@@ -44,7 +44,7 @@ keywords: [
     siteName: "VIVIN KV",
     locale: "en_US",
     url: `${process.env.URL}/blogs`,
-    images:['/about/pic6.jpg'],
+    images:[`${process.env.URL}/about/pic6.jpg`],
   },
 
   twitter: {
@@ -53,7 +53,7 @@ keywords: [
     description:
       "Explore VivinKV's articles on web development and technology, featuring tutorials, project insights, and industry trends with a focus on modern JavaScript frameworks.",
      
-    images: ["/about/pic6.jpg"],
+    images: [`${process.env.URL}/about/pic6.jpg`],
   },
 };
 

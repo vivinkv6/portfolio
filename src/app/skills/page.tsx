@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: `${process.env.URL}/skills`,
     images:[{
-        url:'/about/pic1.jpg',
+        url: `${process.env.URL}/about/pic1.jpg`,
         width:800,
         height:600,
         alt:'VivinKV - Projects'
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     title: "VivinKV - Skills in Front-End & Back-End Technologies",
     description:`
     VivinKV is a skilled MERN stack and React Native developer with expertise in front-end and back-end technologies. With a focus on creating scalable and user-friendly applications, VivinKV is dedicated to staying ahead of the curve in the dynamic world of web development and mobile app development.`,
-    images: ['/about/pic1.jpg'],
+    images: [`${process.env.URL}/about/pic1.jpg`],
   },
 };
 

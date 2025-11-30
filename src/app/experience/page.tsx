@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: `${process.env.URL}/experience`,
         images:[{
-            url:'/about/pic6.jpg',
+            url: `${process.env.URL}/about/pic6.jpg`,
             width:800,
             height:600,
             alt:'VivinKV - Work Experience'
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         title: "VivinKV - Work Experience",
         description:
             "A detailed overview of VivinKV's work experience, highlighting roles at Trebuchet Systems and TinkerHub GCT, focusing on front-end development and technical leadership.",
-        images: ['/about/pic6.jpg'],
+        images: [`${process.env.URL}/about/pic6.jpg`],
     },
 };
 
