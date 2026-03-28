@@ -3,8 +3,17 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 
 export default function RootLayout({
   children,
